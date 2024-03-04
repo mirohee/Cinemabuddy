@@ -8,11 +8,12 @@ import java.net.URL;
 import java.util.Properties;
 
 public class ApiClient {
-    private static final String API_URL = "https://moviesdatabase.p.rapidapi.com/titles";
+    private static final String BASE_URL = "https://moviesdatabase.p.rapidapi.com";
     private static final String CONFIG_FILE = "config.properties";
     private static final String API_HOST = "moviesdatabase.p.rapidapi.com";
     private static final String API_KEY = loadApiKey();
 
+    // Gets Api Key from config file
     private static String loadApiKey() {
         try {
             Properties properties = new Properties();
@@ -24,17 +25,14 @@ public class ApiClient {
         }
     }
 
-    public String searchMovieDataByTitle(String title) throws IOException {
-        String encodedTitle = java.net.URLEncoder.encode(title, "UTF-8");
-        String endpoint = API_URL + "?query=" + encodedTitle;
-
+    // Method that makes api calls so it can be reused
+    private static String makeApiCall(String endpoint) throws IOException {
         URL url = new URL(endpoint);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestMethod("GET");
 
-        // Set X-RapidAPI-Key header
+        // X-RapidApi-Key header
         connection.setRequestProperty("X-RapidAPI-Key", API_KEY);
-        // Set X-RapidAPI-Host header
+        // X-RapidApi-Host header
         connection.setRequestProperty("X-RapidAPI-Host", API_HOST);
 
         int responseCode = connection.getResponseCode();
@@ -48,7 +46,23 @@ public class ApiClient {
                 return response.toString();
             }
         } else {
-            throw new IOException("Failed to search for movie data. Response code: " + responseCode);
+            throw new IOException("Failed to fetch data from API. Response code: " + responseCode);
         }
     }
+
+    public static String getTitleByID(String id) throws IOException {
+        String endpoint = BASE_URL + "/titles/" + id;
+        return makeApiCall(endpoint);
+    }
+
+    public static String searchByAka(String aka) throws IOException {
+        String endpoint = BASE_URL + "/titles/search/akas/" + aka;
+        return makeApiCall(endpoint);
+    }
+
+    public static String getRatingsByID(String id) throws IOException {
+        String endpoint = BASE_URL + "/titles/" + id + "/ratings";
+        return makeApiCall(endpoint);
+    }
+    
 }
