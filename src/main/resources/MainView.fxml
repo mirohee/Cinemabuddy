@@ -4,10 +4,13 @@
 <?import javafx.scene.control.Label?>
 
 <VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
       alignment="CENTER"
       spacing="10"
       prefWidth="600"
       prefHeight="400">
 
-    <Label text="Hello, JavaFX!" />
+    <Label fx:id="greetingLabel" text="Hello, JavaFX!" />
+    <Label fx:id="ratingLabel" />
 </VBox>
+
