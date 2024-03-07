@@ -32,7 +32,7 @@ public class UserController {
             preparedStatement.setString(2, user.getLastname());
             preparedStatement.setString(3, user.getEmail());
             preparedStatement.setString(4, user.getAge());
-            preparedStatement.setString(5, user.getHashedPassword());
+            preparedStatement.setString(5, user.getPassword());
 
             int rowsAffected = preparedStatement.executeUpdate();
             return rowsAffected > 0;
@@ -46,23 +46,18 @@ public class UserController {
     public boolean loginUser(String email, String password) {
         User user = getUserByEmail(email);
 
-        if (user != null && BCrypt.checkpw(password, user.getHashedPassword())) {
+        if (user != null && password.equals(user.getPassword())) {
             System.out.println("Login successful!");
             return true;
         } else {
             System.out.println("Invalid email or password.");
-
-            // Check if user is not null before accessing the hashed password
-            if (user != null) {
-                System.out.println("Hashed password: " + user.getHashedPassword());
-            }
 
             return false;
         }
     }
 
 
-    private User getUserByEmail(String email) {
+    public User getUserByEmail(String email) {
         String query = "SELECT * FROM User WHERE Email = ?";
         try (Connection connection = saveToDatabase.getConnectionToDb();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {

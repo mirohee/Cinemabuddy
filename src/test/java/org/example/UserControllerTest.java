@@ -21,11 +21,20 @@ public class UserControllerTest {
         userController = new UserController();
     }
 
+    @After
+    public void tearDown() {
+        // Delete the user created during registration
+        if (testUser != null) {
+            userController.deleteUser(testUser.getEmail());
+        }
+    }
+
+
 
     @Test
     public void testUserRegistration() {
         // Test user registration
-        testUser = new User("John", "Doe", "john.doe@example.com", "30", "password123");
+        testUser = new User("Joe", "Biden", "joe.biden@example.com", "30", "password123");
         boolean registrationResult = userController.registerUser(testUser);
 
         assertTrue("User registration should be successful.", registrationResult);

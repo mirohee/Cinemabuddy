@@ -8,20 +8,14 @@ public class User {
     private String lastname;
     private String email;
     private String age;
-    private String hashedPassword;
+    private String password;
 
     public User(String firstname, String lastname, String email, String age, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.age = age;
-        this.hashedPassword = hashPassword(password);
-    }
-
-    private String hashPassword(String password) {
-        String salt = BCrypt.gensalt();
-
-        return BCrypt.hashpw(password, salt);
+        this.password = password;
     }
 
     public String getFirstname() {
@@ -40,8 +34,8 @@ public class User {
         return age;
     }
 
-    public String getHashedPassword() {
-        return hashedPassword;
+    public String getPassword() {
+        return password;
     }
 }
 
