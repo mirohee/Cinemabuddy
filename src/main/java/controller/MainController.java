@@ -15,14 +15,13 @@ import java.io.IOException;
 public class MainController {
 
 
-
     @FXML
     public void initialize() {
 
     }
 
     @FXML
-    private void signInButtonClicked(ActionEvent event) throws IOException {
+    private void LoginButtonClicked(ActionEvent event) throws IOException {
         // Load the Homepage.fxml file
         Parent homePageParent = FXMLLoader.load(getClass().getResource("/Login.fxml"));
 
@@ -33,7 +32,21 @@ public class MainController {
         stage.setScene(new Scene(homePageParent));
     }
 
-    public static void main(String[] args) {
-        App.launch(App.class);
+    @FXML
+    private void RegisterButtonClicked(ActionEvent event) throws IOException {
+        // Load the Register.fxml file
+        Parent homePageParent = FXMLLoader.load(getClass().getResource("/Register.fxml"));
+
+        // Get the current stage
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+        // Set the scene with Register.fxml content
+        stage.setScene(new Scene(homePageParent));
     }
-}
+
+        public static void main (String[]args){
+            App.launch(App.class);
+        }
+    }
+
+
