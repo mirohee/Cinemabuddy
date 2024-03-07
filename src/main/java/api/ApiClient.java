@@ -64,5 +64,16 @@ public class ApiClient {
         String endpoint = BASE_URL + "/titles/" + id + "/ratings";
         return makeApiCall(endpoint);
     }
+
+    public static String getGenres() throws IOException {
+        String endpoint = BASE_URL + "/titles/utils/genres";
+        return makeApiCall(endpoint);
+    }
+
+    public static String getActorsByID(String id) throws IOException {
+        String endpoint = BASE_URL + "/actors/" + id;
+        return makeApiCall(endpoint);
+    }
+    
     
 }
