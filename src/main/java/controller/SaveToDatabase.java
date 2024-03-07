@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.text.DecimalFormat;
+import java.util.Properties;
 
 public class SaveToDatabase {
     public Connection getConnectionToDb() {
