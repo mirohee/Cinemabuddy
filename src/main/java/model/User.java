@@ -1,5 +1,7 @@
 package model;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 public class User {
 
     private String firstname;
@@ -15,4 +17,25 @@ public class User {
         this.age = age;
         this.password = password;
     }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
+
