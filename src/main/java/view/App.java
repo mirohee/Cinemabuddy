@@ -24,7 +24,7 @@ public class App extends Application {
         // Set up the scene
         Scene scene = new Scene(new VBox(root), 600, 400);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("JavaFX Application");
+        primaryStage.setTitle("Cinemabuddy");
         primaryStage.show();
     }
 
