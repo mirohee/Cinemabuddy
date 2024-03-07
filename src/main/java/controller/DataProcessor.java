@@ -22,6 +22,8 @@ public class DataProcessor {
                 String genre = jsonArray.getString(i);
                 if (genre != null) {
                     genres.add(genre);
+                    // Log the added genre
+                    System.out.println("Added genre: " + genre);
                 }
             }
         } catch (JSONException e) {
@@ -52,6 +54,9 @@ public class DataProcessor {
                     // Create a new TitleInfo object and add it to the list
                     TitleInfo titleInfo = new TitleInfo(id, title, imageUrl);
                     titles.add(titleInfo);
+
+                    // Log the added title and ID
+                    System.out.println("Added title: " + title + ", ID: " + id);
                 }
             } else {
                 // Handle missing "results" array
