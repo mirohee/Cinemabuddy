@@ -1,4 +1,4 @@
-package org.example;
+package controller;
 
 import controller.UserController;
 import model.User;
