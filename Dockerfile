@@ -12,4 +12,5 @@ COPY src /app/src/
 
 RUN mvn package
 
-CMD ["java", "--module-path", "/usr/share/openjfx/lib", "--add-modules", "javafx.controls,javafx.fxml", "-jar", "target/cinemabuddy.jar"]
+# Set system property for JavaFX rendering
+CMD ["java", "-Dprism.order=sw", "--module-path", "/usr/share/openjfx/lib", "--add-modules", "javafx.controls,javafx.fxml", "-jar", "target/cinemabuddy.jar"]
