@@ -3,14 +3,14 @@ pipeline {
     environment {
         PATH = "${env.PATH};C:\\Windows\\System32" // Update the PATH to include the directory of cmd.exe
         DOCKERHUB_CREDENTIALS_ID = 'mirohee'
-        DOCKERHUB_REPO = 'mirohee/fartocelkelvin'
+        DOCKERHUB_REPO = 'mirohee/cinemabuddy'
         DOCKER_IMAGE_TAG = 'latest'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'mirohee', url: 'https://github.com/mirohee/FarToCel.git'
+                git branch: 'main', credentialsId: 'mirohee', url: 'https://github.com/mirohee/Cinemabuddy.git'
             }
         }
 
