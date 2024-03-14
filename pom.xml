@@ -88,7 +88,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>controller.MainController</mainClass>
+                            <mainClass>view.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
