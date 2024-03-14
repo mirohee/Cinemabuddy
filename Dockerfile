@@ -9,10 +9,12 @@ COPY pom.xml /app/
 
 COPY . /app/
 
-RUN mvn package
+# Unset JAVA_TOOL_OPTIONS before running Maven package command
+RUN unset JAVA_TOOL_OPTIONS && mvn package
 
 # Set the entry point to run the application
 CMD ["java", "-jar", "target/cinemabuddy.jar"]
+
 
 
 
