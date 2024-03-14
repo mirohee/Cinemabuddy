@@ -48,7 +48,7 @@ Use CiscoVPN to connect to vpn.metropolia.fi
 Run a VM that has UBUNTU operating system and Docker
 
 Type in terminal: 
-docker pull mirohee/cinemabuddy:latest
+docker pull mirohee/cinemabuddy:latest  
 docker run mirohee/cinemabuddy:latest
 
 Future Work
