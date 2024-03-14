@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserController {
-
+//add error handling
     private SaveToDatabase saveToDatabase;
 
     public UserController() {

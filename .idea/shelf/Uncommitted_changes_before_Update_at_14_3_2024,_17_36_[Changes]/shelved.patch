@@ -1,0 +1,102 @@
+Index: src/main/resources/DisplayResults.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<?import javafx.scene.control.*?>\n<?import javafx.scene.layout.*?>\n<?import javafx.scene.paint.LinearGradient?>\n<?import javafx.scene.paint.Stop?>\n<?import javafx.scene.shape.Rectangle?>\n<VBox xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"controller.MainController\" alignment=\"CENTER\" spacing=\"20.0\">\n    <StackPane>\n        <Rectangle width=\"800.0\" height=\"600.0\">\n            <fill>\n                <LinearGradient endX=\"0\" endY=\"1\">\n                    <stops>\n                        <Stop color=\"#c02029\" offset=\"0.0\" />\n                        <Stop color=\"darkred\" offset=\"1.0\" />\n                    </stops>\n                </LinearGradient>\n            </fill>\n        </Rectangle>\n        <VBox alignment=\"CENTER\" spacing=\"20.0\">\n            <!-- Button for opening history -->\n            <HBox alignment=\"TOP_RIGHT\" style=\"-fx-padding: 10px;\">\n                <Button text=\"History\" style=\"-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-cursor: hand;\"\n                        onAction=\"#HistoryButtonClicked\" />\n            </HBox>\n            <Label text=\"Search Movies/Series Results\" style=\"-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ffffff;\" />\n            <!-- Sample Result Cards -->\n            <VBox spacing=\"10\">\n                <!-- Result Card 1 -->\n                <StackPane style=\"-fx-background-color: #ffffff; -fx-padding: 10px;\">\n                    <!-- Content for Result Card 1 -->\n                    <VBox>\n                        <Label text=\"Show Title 1\" style=\"-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #000000;\" />\n                        <Label text=\"Director: Director Name\" style=\"-fx-font-size: 14px; -fx-text-fill: #000000;\" />\n                        <Label text=\"Genre: Action, Drama\" style=\"-fx-font-size: 14px; -fx-text-fill: #000000;\" />\n                        <Label text=\"Release Year: 2023\" style=\"-fx-font-size: 14px; -fx-text-fill: #000000;\" />\n                    </VBox>\n                </StackPane>\n                <!-- Result Card 2 -->\n                <StackPane style=\"-fx-background-color: #ffffff; -fx-padding: 10px;\">\n                    <!-- Content for Result Card 2 -->\n                    <VBox>\n                        <Label text=\"Show Title 2\" style=\"-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #000000;\" />\n                        <Label text=\"Director: Director Name\" style=\"-fx-font-size: 14px; -fx-text-fill: #000000;\" />\n                        <Label text=\"Genre: Comedy, Romance\" style=\"-fx-font-size: 14px; -fx-text-fill: #000000;\" />\n                        <Label text=\"Release Year: 2024\" style=\"-fx-font-size: 14px; -fx-text-fill: #000000;\" />\n                    </VBox>\n                </StackPane>\n                <!-- Add more Result Cards as needed -->\n            </VBox>\n        </VBox>\n    </StackPane>\n</VBox>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/DisplayResults.fxml b/src/main/resources/DisplayResults.fxml
+--- a/src/main/resources/DisplayResults.fxml	(revision 5cab357928e641f31b87bdf6e3d5594730dc4626)
++++ b/src/main/resources/DisplayResults.fxml	(date 1710356841765)
+@@ -23,7 +23,7 @@
+                 <Button text="History" style="-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-cursor: hand;"
+                         onAction="#HistoryButtonClicked" />
+             </HBox>
+-            <Label text="Search Movies/Series Results" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
++            <Label text="Search Movies/Series " style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+             <!-- Sample Result Cards -->
+             <VBox spacing="10">
+                 <!-- Result Card 1 -->
+Index: src/main/java/controller/UserController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\n\nimport model.User;\nimport org.mindrot.jbcrypt.BCrypt;\n\nimport java.sql.Connection;\nimport java.sql.PreparedStatement;\nimport java.sql.ResultSet;\nimport java.sql.SQLException;\n\npublic class UserController {\n\n    private SaveToDatabase saveToDatabase;\n\n    public UserController() {\n        this.saveToDatabase = new SaveToDatabase();\n    }\n\n    public boolean registerUser(User user) {\n        // Check if the user with the given email already exists\n        if (getUserByEmail(user.getEmail()) != null) {\n            System.out.println(\"User with this email already exists.\");\n            return false;\n        }\n\n        // Insert the new user into the database\n        String query = \"INSERT INTO User (FirstName, LastName, Email, Age, Password) VALUES (?, ?, ?, ?, ?)\";\n        try (Connection connection = saveToDatabase.getConnectionToDb();\n             PreparedStatement preparedStatement = connection.prepareStatement(query)) {\n\n            preparedStatement.setString(1, user.getFirstname());\n            preparedStatement.setString(2, user.getLastname());\n            preparedStatement.setString(3, user.getEmail());\n            preparedStatement.setString(4, user.getAge());\n            preparedStatement.setString(5, user.getPassword());\n\n            int rowsAffected = preparedStatement.executeUpdate();\n            return rowsAffected > 0;\n\n        } catch (SQLException e) {\n            System.out.println(\"Error registering user: \" + e.getMessage());\n            return false;\n        }\n    }\n\n    public boolean loginUser(String email, String password) {\n        User user = getUserByEmail(email);\n\n        if (user != null && password.equals(user.getPassword())) {\n            System.out.println(\"Login successful!\");\n            return true;\n        } else {\n            System.out.println(\"Invalid email or password.\");\n\n            return false;\n        }\n    }\n\n\n    public User getUserByEmail(String email) {\n        String query = \"SELECT * FROM User WHERE Email = ?\";\n        try (Connection connection = saveToDatabase.getConnectionToDb();\n             PreparedStatement preparedStatement = connection.prepareStatement(query)) {\n\n            preparedStatement.setString(1, email);\n            ResultSet resultSet = preparedStatement.executeQuery();\n\n            if (resultSet.next()) {\n                return new User(\n                        resultSet.getString(\"FirstName\"),\n                        resultSet.getString(\"LastName\"),\n                        resultSet.getString(\"Email\"),\n                        resultSet.getString(\"Age\"),\n                        resultSet.getString(\"Password\")\n                );\n            }\n\n        } catch (SQLException e) {\n            System.out.println(\"Error getting user by email: \" + e.getMessage());\n        }\n        return null;\n    }\n    public Boolean deleteUser(String email) {\n        String query = \"DELETE FROM User WHERE Email = ?\";\n        try (Connection connection = saveToDatabase.getConnectionToDb();\n             PreparedStatement preparedStatement = connection.prepareStatement(query)) {\n\n            preparedStatement.setString(1, email);\n            int rowsAffected = preparedStatement.executeUpdate();\n            return rowsAffected > 0;\n\n        } catch (SQLException e) {\n            System.out.println(\"Error deleting user: \" + e.getMessage());\n            return false;\n        }\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/UserController.java b/src/main/java/controller/UserController.java
+--- a/src/main/java/controller/UserController.java	(revision 5cab357928e641f31b87bdf6e3d5594730dc4626)
++++ b/src/main/java/controller/UserController.java	(date 1710356841764)
+@@ -9,7 +9,7 @@
+ import java.sql.SQLException;
+ 
+ public class UserController {
+-
++//add error handling
+     private SaveToDatabase saveToDatabase;
+ 
+     public UserController() {
+Index: src/main/java/controller/MainController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.scene.Parent;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Button;\nimport javafx.scene.control.Label;\nimport javafx.stage.Stage;\nimport view.App;\n\nimport java.io.IOException;\n\npublic class MainController {\n\n\n    @FXML\n    public void initialize() {\n        System.out.println(\"MainController initialized\");\n    }\n\n\n\n    @FXML\n    private void LoginButtonClicked(ActionEvent event) throws IOException {\n        // Load the Homepage.fxml file\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/Login.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Homepage.fxml content\n        stage.setScene(new Scene(homePageParent));\n    }\n\n    @FXML\n    private void RegisterButtonClicked(ActionEvent event) throws IOException {\n        // Load the Register.fxml file\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/Register.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Register.fxml content\n        stage.setScene(new Scene(homePageParent));\n    }\n    @FXML\n    private void HomepageButtonClicked(ActionEvent event) throws IOException {\n        // Load the Register.fxml file\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/HomePage.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Register.fxml content\n        stage.setScene(new Scene(homePageParent));\n    }\n    @FXML\n    private void SearchButtonClicked(ActionEvent event) throws IOException {\n        // Load the Register.fxml file\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/DisplayResults.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Register.fxml content\n        stage.setScene(new Scene(homePageParent));\n    } @FXML\n    private void HistoryButtonClicked(ActionEvent event) throws IOException {\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/WatchHistory.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Register.fxml content\n        stage.setScene(new Scene(homePageParent));\n    }\n\n\n\n        public static void main (String[]args){\n            App.launch(App.class);\n        }\n    }\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/MainController.java b/src/main/java/controller/MainController.java
+--- a/src/main/java/controller/MainController.java	(revision 5cab357928e641f31b87bdf6e3d5594730dc4626)
++++ b/src/main/java/controller/MainController.java	(date 1710356841764)
+@@ -24,13 +24,12 @@
+ 
+     @FXML
+     private void LoginButtonClicked(ActionEvent event) throws IOException {
+-        // Load the Homepage.fxml file
++
+         Parent homePageParent = FXMLLoader.load(getClass().getResource("/Login.fxml"));
+ 
+-        // Get the current stage
+         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+ 
+-        // Set the scene with Homepage.fxml content
++        // Set the scene with Login.fxml content
+         stage.setScene(new Scene(homePageParent));
+     }
+ 
+@@ -39,26 +38,23 @@
+         // Load the Register.fxml file
+         Parent homePageParent = FXMLLoader.load(getClass().getResource("/Register.fxml"));
+ 
+-        // Get the current stage
+         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+ 
+-        // Set the scene with Register.fxml content
+         stage.setScene(new Scene(homePageParent));
+     }
+     @FXML
+     private void HomepageButtonClicked(ActionEvent event) throws IOException {
+-        // Load the Register.fxml file
++        // Load the HomePage.fxml file
+         Parent homePageParent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
+ 
+-        // Get the current stage
++
+         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+ 
+-        // Set the scene with Register.fxml content
+         stage.setScene(new Scene(homePageParent));
+     }
+     @FXML
+     private void SearchButtonClicked(ActionEvent event) throws IOException {
+-        // Load the Register.fxml file
++        // Load the DisplayResult.fxml file
+         Parent homePageParent = FXMLLoader.load(getClass().getResource("/DisplayResults.fxml"));
+ 
+         // Get the current stage
+@@ -68,6 +64,7 @@
+         stage.setScene(new Scene(homePageParent));
+     } @FXML
+     private void HistoryButtonClicked(ActionEvent event) throws IOException {
++
+         Parent homePageParent = FXMLLoader.load(getClass().getResource("/WatchHistory.fxml"));
+ 
+         // Get the current stage

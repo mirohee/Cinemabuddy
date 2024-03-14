@@ -1,0 +1,285 @@
+Index: src/main/resources/Login.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<?import javafx.scene.control.Button?>\n<?import javafx.scene.control.Label?>\n<?import javafx.scene.control.PasswordField?>\n<?import javafx.scene.control.TextField?>\n<?import javafx.scene.layout.*?>\n<?import javafx.scene.paint.LinearGradient?>\n<?import javafx.scene.paint.Stop?>\n<?import javafx.scene.shape.Rectangle?>\n<VBox xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"controller.MainController\" alignment=\"CENTER\" spacing=\"20.0\">\n    <StackPane>\n        <Rectangle width=\"800.0\" height=\"600.0\">\n            <fill>\n                <LinearGradient endX=\"0\" endY=\"1\">\n                    <stops>\n                        <Stop color=\"#c02029\" offset=\"0.0\" />\n                        <Stop color=\"darkred\" offset=\"1.0\" />\n                    </stops>\n                </LinearGradient>\n            </fill>\n        </Rectangle>\n        <VBox alignment=\"CENTER\" spacing=\"20.0\">\n            <Label text=\"Cinemabuddy!\" style=\"-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #ffffff;\" />\n\n            <VBox spacing=\"10.0\">\n                <Region prefWidth=\"10\" />\n                <TextField fx:id=\"emailField\" promptText=\"Email\" style=\"-fx-padding: 3px;\" />\n                <Region prefWidth=\"10\" />\n                <PasswordField fx:id=\"passwordField\" promptText=\"Password\" style=\"-fx-padding: 3px;\" />\n\n            </VBox>\n\n            <HBox alignment=\"CENTER\" spacing=\"10.0\">\n                <Button text=\"Login\" style=\"-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 18px; -fx-padding: 10px 20px; -fx-cursor: hand;\"\n                        onAction=\"#HomepageButtonClicked\" />\n            </HBox>\n        </VBox>\n    </StackPane>\n</VBox>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/Login.fxml b/src/main/resources/Login.fxml
+--- a/src/main/resources/Login.fxml	(revision 5cab357928e641f31b87bdf6e3d5594730dc4626)
++++ b/src/main/resources/Login.fxml	(date 1709844259327)
+@@ -8,7 +8,7 @@
+ <?import javafx.scene.paint.LinearGradient?>
+ <?import javafx.scene.paint.Stop?>
+ <?import javafx.scene.shape.Rectangle?>
+-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController" alignment="CENTER" spacing="20.0">
++<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController" alignment="CENTER" spacing="20.0">
+     <StackPane>
+         <Rectangle width="800.0" height="600.0">
+             <fill>
+@@ -33,7 +33,7 @@
+ 
+             <HBox alignment="CENTER" spacing="10.0">
+                 <Button text="Login" style="-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 18px; -fx-padding: 10px 20px; -fx-cursor: hand;"
+-                        onAction="#HomepageButtonClicked" />
++                        onAction="#LoginButtonClicked" />
+             </HBox>
+         </VBox>
+     </StackPane>
+Index: src/main/java/controller/MainController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.scene.Parent;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Button;\nimport javafx.scene.control.Label;\nimport javafx.stage.Stage;\nimport view.App;\n\nimport java.io.IOException;\n\npublic class MainController {\n\n\n    @FXML\n    public void initialize() {\n        System.out.println(\"MainController initialized\");\n    }\n\n\n\n    @FXML\n    private void LoginButtonClicked(ActionEvent event) throws IOException {\n        // Load the Homepage.fxml file\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/Login.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Homepage.fxml content\n        stage.setScene(new Scene(homePageParent));\n    }\n\n    @FXML\n    private void RegisterButtonClicked(ActionEvent event) throws IOException {\n        // Load the Register.fxml file\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/Register.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Register.fxml content\n        stage.setScene(new Scene(homePageParent));\n    }\n    @FXML\n    private void HomepageButtonClicked(ActionEvent event) throws IOException {\n        // Load the Register.fxml file\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/HomePage.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Register.fxml content\n        stage.setScene(new Scene(homePageParent));\n    }\n    @FXML\n    private void SearchButtonClicked(ActionEvent event) throws IOException {\n        // Load the Register.fxml file\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/DisplayResults.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Register.fxml content\n        stage.setScene(new Scene(homePageParent));\n    } @FXML\n    private void HistoryButtonClicked(ActionEvent event) throws IOException {\n        Parent homePageParent = FXMLLoader.load(getClass().getResource(\"/WatchHistory.fxml\"));\n\n        // Get the current stage\n        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();\n\n        // Set the scene with Register.fxml content\n        stage.setScene(new Scene(homePageParent));\n    }\n\n\n\n        public static void main (String[]args){\n            App.launch(App.class);\n        }\n    }\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/MainController.java b/src/main/java/controller/MainController.java
+--- a/src/main/java/controller/MainController.java	(revision 5cab357928e641f31b87bdf6e3d5594730dc4626)
++++ b/src/main/java/controller/MainController.java	(date 1709844259326)
+@@ -45,17 +45,7 @@
+         // Set the scene with Register.fxml content
+         stage.setScene(new Scene(homePageParent));
+     }
+-    @FXML
+-    private void HomepageButtonClicked(ActionEvent event) throws IOException {
+-        // Load the Register.fxml file
+-        Parent homePageParent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
+-
+-        // Get the current stage
+-        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+-
+-        // Set the scene with Register.fxml content
+-        stage.setScene(new Scene(homePageParent));
+-    }
++
+     @FXML
+     private void SearchButtonClicked(ActionEvent event) throws IOException {
+         // Load the Register.fxml file
+Index: src/main/resources/WatchHistory.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<?import javafx.scene.control.*?>\n<?import javafx.scene.layout.StackPane?>\n<?import javafx.scene.layout.VBox?>\n<?import javafx.scene.paint.LinearGradient?>\n<?import javafx.scene.paint.Stop?>\n<?import javafx.scene.shape.Rectangle?>\n<VBox xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"controller.MainController\" alignment=\"CENTER\" spacing=\"20.0\">\n    <StackPane>\n        <Rectangle width=\"800.0\" height=\"600.0\">\n            <fill>\n                <LinearGradient endX=\"0\" endY=\"1\">\n                    <stops>\n                        <Stop color=\"#c02029\" offset=\"0.0\" />\n                        <Stop color=\"darkred\" offset=\"1.0\" />\n                    </stops>\n                </LinearGradient>\n            </fill>\n        </Rectangle>\n        <VBox alignment=\"CENTER\" spacing=\"20.0\">\n            <Label text=\"Watch History\" style=\"-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ffffff;\" />\n            <!-- Sample Previous Searches List -->\n            <VBox spacing=\"10\">\n                <!-- Previous Search 1 -->\n                <Label text=\"Show Title 1\" style=\"-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;\" />\n                <Label text=\"Show Title 2\" style=\"-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;\" />\n                <Label text=\"Show Title 3\" style=\"-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;\" />\n                <Label text=\"Show Title 2\" style=\"-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;\" />\n                <Label text=\"Show Title 3\" style=\"-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;\" />\n                <!-- Just some dummy data for display -->\n\n            </VBox>\n        </VBox>\n    </StackPane>\n</VBox>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/WatchHistory.fxml b/src/main/resources/WatchHistory.fxml
+--- a/src/main/resources/WatchHistory.fxml	(revision 5cab357928e641f31b87bdf6e3d5594730dc4626)
++++ b/src/main/resources/WatchHistory.fxml	(date 1709843927330)
+@@ -23,11 +23,11 @@
+             <!-- Sample Previous Searches List -->
+             <VBox spacing="10">
+                 <!-- Previous Search 1 -->
+-                <Label text="Show Title 1" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+-                <Label text="Show Title 2" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+-                <Label text="Show Title 3" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+-                <Label text="Show Title 2" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+-                <Label text="Show Title 3" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
++                <Label text="Inception" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
++                <Label text="50 Shades Of Grey" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
++                <Label text="The Notebook" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
++                <Label text="Dune 2" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
++                <Label text="Gamenight" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+                 <!-- Just some dummy data for display -->
+ 
+             </VBox>
+Index: src/main/java/api/ApiClient.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package api;\n\nimport java.io.BufferedReader;\nimport java.io.IOException;\nimport java.io.InputStreamReader;\nimport java.net.HttpURLConnection;\nimport java.net.URL;\nimport java.util.Properties;\n\npublic class ApiClient {\n    private static final String BASE_URL = \"https://moviesdatabase.p.rapidapi.com\";\n    private static final String CONFIG_FILE = \"config.properties\";\n    private static final String API_HOST = \"moviesdatabase.p.rapidapi.com\";\n    private static final String API_KEY = loadApiKey();\n\n    // Gets Api Key from config file\n    private static String loadApiKey() {\n        try {\n            Properties properties = new Properties();\n            properties.load(ApiClient.class.getClassLoader().getResourceAsStream(CONFIG_FILE));\n            return properties.getProperty(\"API_KEY\");\n        } catch (IOException e) {\n            e.printStackTrace();\n            return null;\n        }\n    }\n\n    // Method that makes api calls so it can be reused\n    private static String makeApiCall(String endpoint) throws IOException {\n        URL url = new URL(endpoint);\n        HttpURLConnection connection = (HttpURLConnection) url.openConnection();\n\n        // X-RapidApi-Key header\n        connection.setRequestProperty(\"X-RapidAPI-Key\", API_KEY);\n        // X-RapidApi-Host header\n        connection.setRequestProperty(\"X-RapidAPI-Host\", API_HOST);\n\n        int responseCode = connection.getResponseCode();\n        if (responseCode == HttpURLConnection.HTTP_OK) {\n            try (BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {\n                StringBuilder response = new StringBuilder();\n                String inputLine;\n                while ((inputLine = in.readLine()) != null) {\n                    response.append(inputLine);\n                }\n                return response.toString();\n            }\n        } else {\n            throw new IOException(\"Failed to fetch data from API. Response code: \" + responseCode);\n        }\n    }\n\n    public static String getTitleByID(String id) throws IOException {\n        String endpoint = BASE_URL + \"/titles/\" + id;\n        return makeApiCall(endpoint);\n    }\n\n    public static String searchByAka(String aka) throws IOException {\n        String endpoint = BASE_URL + \"/titles/search/akas/\" + aka;\n        return makeApiCall(endpoint);\n    }\n\n    public static String getRatingsByID(String id) throws IOException {\n        String endpoint = BASE_URL + \"/titles/\" + id + \"/ratings\";\n        return makeApiCall(endpoint);\n    }\n\n    public static String getGenres() throws IOException {\n        String endpoint = BASE_URL + \"/titles/utils/genres\";\n        return makeApiCall(endpoint);\n    }\n\n    public static String getActorsByID(String id) throws IOException {\n        String endpoint = BASE_URL + \"/actors/\" + id;\n        return makeApiCall(endpoint);\n    }\n    \n    \n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/api/ApiClient.java b/src/main/java/api/ApiClient.java
+--- a/src/main/java/api/ApiClient.java	(revision 5cab357928e641f31b87bdf6e3d5594730dc4626)
++++ b/src/main/java/api/ApiClient.java	(date 1709844259326)
+@@ -75,5 +75,4 @@
+         return makeApiCall(endpoint);
+     }
+     
+-    
+ }
+Index: src/main/java/controller/MovieDataHandler.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/MovieDataHandler.java b/src/main/java/controller/MovieDataHandler.java
+new file mode 100644
+--- /dev/null	(date 1709844259327)
++++ b/src/main/java/controller/MovieDataHandler.java	(date 1709844259327)
+@@ -0,0 +1,57 @@
++package controller;
++
++import java.io.IOException;
++import java.sql.Connection;
++import java.sql.DriverManager;
++import java.sql.PreparedStatement;
++import java.sql.SQLException;
++
++import org.json.JSONException;
++import org.json.JSONObject;
++
++import api.ApiClient;
++
++public class MovieDataHandler {
++    public void saveMovieIdToDatabase(String movieTitle) {
++        try {
++            // Make an API call to search for the movie by title
++            String searchResults = ApiClient.searchByAka(movieTitle);
++
++            // Parse the response to extract the movie ID
++            String movieId = parseMovieIdFromResponse(searchResults);
++
++            // Connect to the database
++            try (Connection connection = getConnectionToDatabase()) {
++                // Insert the movie ID into the database
++                insertMovieId(connection, movieId);
++            }
++        } catch (IOException | JSONException | SQLException e) {
++            e.printStackTrace();
++        }
++    }
++
++    private String parseMovieIdFromResponse(String searchResults) throws JSONException {
++        JSONObject jsonObject = new JSONObject(searchResults);
++        if (jsonObject.has("results")) {
++            JSONObject firstResult = jsonObject.getJSONArray("results").getJSONObject(0);
++            return firstResult.getString("id");
++        }
++        return null;
++    }
++
++    private Connection getConnectionToDatabase() throws SQLException {
++        String url = "jdbc:mysql://mysql.metropolia.fi:3306/mirosaa";
++        String username = "mirosaa";
++        String password = "1234";
++        return DriverManager.getConnection(url, username, password);
++    }
++
++    private void insertMovieId(Connection connection, String movieId) throws SQLException {
++        String query = "INSERT INTO Movie (MovieId, GenreId) VALUES (?, ?)";
++        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
++            preparedStatement.setString(1, movieId);
++            preparedStatement.setInt(2, 2); // Replace DEFAULT_GENRE_ID with the default genre ID
++            preparedStatement.executeUpdate();
++        }
++    }
++}
+Index: src/main/java/controller/DataProcessor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\n\nimport org.json.JSONArray;\nimport org.json.JSONException;\nimport org.json.JSONObject;\n\nimport java.util.ArrayList;\nimport java.util.List;\n\nimport model.TitleInfo;\n\npublic class DataProcessor {\n    public static List<String> processedGenresResponse(String genresResponse) {\n        List<String> genres = new ArrayList<>();\n\n        try {\n            JSONObject jsonObject = new JSONObject(genresResponse);\n            JSONArray jsonArray = jsonObject.getJSONArray(\"results\");\n\n            // Iterate over each genre in the array\n            for (int i = 0; i < jsonArray.length(); i++) {\n                String genre = jsonArray.getString(i);\n                if (genre != null) {\n                    genres.add(genre);\n                }\n            }\n        } catch (JSONException e) {\n            e.printStackTrace();\n            // Handle JSON parsing error\n            System.err.println(\"Error processing genres response: \" + e.getMessage());\n        }\n\n        return genres;\n    }\n\n    public static List<TitleInfo> processedSearchResults(String searchResults) {\n        List<TitleInfo> titles = new ArrayList<>();\n\n        try {\n            JSONObject jsonObject = new JSONObject(searchResults);\n            if (jsonObject.has(\"results\")) {\n                JSONArray resultsArray = jsonObject.getJSONArray(\"results\");\n\n                for (int i = 0; i < resultsArray.length(); i++) {\n                    JSONObject result = resultsArray.getJSONObject(i);\n\n                    // Extract relevant information from each result object\n                    String id = result.getString(\"id\");\n                    String title = result.getJSONObject(\"titleText\").getString(\"text\");\n                    String imageUrl = result.getJSONObject(\"primaryImage\").getString(\"url\");\n\n                    // Create a new TitleInfo object and add it to the list\n                    TitleInfo titleInfo = new TitleInfo(id, title, imageUrl);\n                    titles.add(titleInfo);\n                }\n            } else {\n                // Handle missing \"results\" array\n                System.err.println(\"Error: 'results' array not found in search results.\");\n            }\n        } catch (JSONException e) {\n            e.printStackTrace();\n            // Handle JSON parsing error\n            System.err.println(\"Error processing search results: \" + e.getMessage());\n        }\n\n        return titles;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/DataProcessor.java b/src/main/java/controller/DataProcessor.java
+--- a/src/main/java/controller/DataProcessor.java	(revision 5cab357928e641f31b87bdf6e3d5594730dc4626)
++++ b/src/main/java/controller/DataProcessor.java	(date 1709844259326)
+@@ -22,6 +22,8 @@
+                 String genre = jsonArray.getString(i);
+                 if (genre != null) {
+                     genres.add(genre);
++                    // Log the added genre
++                    System.out.println("Added genre: " + genre);
+                 }
+             }
+         } catch (JSONException e) {
+@@ -52,6 +54,9 @@
+                     // Create a new TitleInfo object and add it to the list
+                     TitleInfo titleInfo = new TitleInfo(id, title, imageUrl);
+                     titles.add(titleInfo);
++
++                    // Log the added title and ID
++                    System.out.println("Added title: " + title + ", ID: " + id);
+                 }
+             } else {
+                 // Handle missing "results" array
+Index: src/test/java/controller/MovieDataHandlerTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/controller/MovieDataHandlerTest.java b/src/test/java/controller/MovieDataHandlerTest.java
+new file mode 100644
+--- /dev/null	(date 1709844259327)
++++ b/src/test/java/controller/MovieDataHandlerTest.java	(date 1709844259327)
+@@ -0,0 +1,18 @@
++package controller;
++
++public class MovieDataHandlerTest {
++
++    public static void main(String[] args) {
++        // Initialize MovieDataHandler
++        MovieDataHandler dataHandler = new MovieDataHandler();
++
++        // Provide a movie title to save to the database
++        String movieTitle = "Breaking Bad";
++
++        // Save the movie ID to the database
++        dataHandler.saveMovieIdToDatabase(movieTitle);
++
++        // Print a message indicating that the movie ID has been saved to the database
++        System.out.println("Movie ID for '" + movieTitle + "' saved to the database.");
++    }
++}
+Index: src/main/java/controller/LoginController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controller/LoginController.java b/src/main/java/controller/LoginController.java
+new file mode 100644
+--- /dev/null	(date 1709844259326)
++++ b/src/main/java/controller/LoginController.java	(date 1709844259326)
+@@ -0,0 +1,51 @@
++package controller;
++
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.Button;
++import javafx.scene.control.PasswordField;
++import javafx.scene.control.TextField;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
++public class LoginController {
++
++    @FXML
++    private TextField emailField;
++
++    @FXML
++    private PasswordField passwordField;
++
++    @FXML
++    private void LoginButtonClicked(ActionEvent event) throws IOException {
++        String email = emailField.getText();
++        String password = passwordField.getText();
++
++        UserController userController = new UserController();
++        if (userController.loginUser(email, password)) {
++            // Login successful, perform desired actions
++            System.out.println("Login successful!");
++
++            // Load the Register.fxml file
++            Parent homePageParent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
++
++            // Get the current stage
++            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
++
++            // Set the scene with Register.fxml content
++            stage.setScene(new Scene(homePageParent));
++
++
++
++        } else {
++            // Invalid credentials, show error message or take appropriate action
++            System.out.println("Invalid email or password.");
++
++        }
++    }
++}
++
