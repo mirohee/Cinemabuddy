@@ -1,5 +1,5 @@
-Cinemabuddy - Movie Recommendation System
-Cinemabuddy is a movie recommendation system built using machine learning techniques in Java. The system aims to recommend movies to users based on their past viewing history and preferences.
+Cinemabuddy - Show Recommendation System
+Cinemabuddy is a show recommendation system built using machine learning techniques in Java. The system aims to recommend shows to users based on their past viewing history and preferences.
 
 Group Members
 Keti Mandunga
@@ -8,7 +8,7 @@ Akseli Kaarre
 Miro Saarinen
 
 **Project Overview**
-The main goal of this project is to develop a movie recommendation system that can assist users in discovering new movies based on their interests and preferences. By leveraging machine learning algorithms, Cinemabuddy provides personalized recommendations tailored to each user's tastes.
+The main goal of this project is to develop a show recommendation system that can assist users in discovering new shows based on their interests and preferences. By leveraging machine learning algorithms, Cinemabuddy provides personalized recommendations tailored to each user's tastes.
 
 **Technical Stack**
 Cinemabuddy is built using the following technologies:
@@ -36,13 +36,27 @@ The performance of the model is evaluated using the Mean Squared Error (MSE) met
 To use Cinemabuddy:
 
 Clone the repository from GitHub.
-Ensure that Java and Docker are installed on your system.
-Follow the instructions in the README file to set up the environment and run the code.
+Ensure that Java is installed on your system.
+Use CiscoVPN to connect to vpn.metropolia.fi
+Right click the pom.xml
+Maven => Reload Project
+Run MainController.java
+
+OR
+
+Use CiscoVPN to connect to vpn.metropolia.fi
+Run a VM that has UBUNTU operating system and Docker
+
+Type in terminal: 
+docker pull mirohee/cinemabuddy:latest
+docker run mirohee/cinemabuddy:latest
+
 Future Work
 In future iterations of Cinemabuddy, we plan to:
 
 Incorporate additional features such as user demographics and movie genres to improve recommendation accuracy.
 Explore alternative recommendation techniques, such as content-based filtering, to enhance the diversity of recommendations.
+
 Conclusion
 Cinemabuddy successfully achieves its goal of providing personalized movie recommendations to users. While the current model demonstrates reasonable accuracy, there is still room for improvement. We are excited to continue refining and expanding Cinemabuddy to make it even more accurate and robust in the future.
 
