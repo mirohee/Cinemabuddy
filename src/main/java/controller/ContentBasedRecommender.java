@@ -14,7 +14,7 @@ public class ContentBasedRecommender {
         try {
             // Fetch genres from API
             String genresResponse = ApiClient.getGenres();
-            List<String> genres = DataProcessor.processedGenresResponse(genresResponse);
+            //List<String> genres = DataProcessor.processedGenresResponse(genresResponse);
 
 
         } catch (IOException e) {
