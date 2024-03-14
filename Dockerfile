@@ -1,10 +1,8 @@
 FROM maven:latest
 
-# Install javafx
-RUN apt-get update && \
-    apt-cache madison openjfx && \
-    apt-get install -y openjfx=21.0.1 && \
-    apt-get clean;
+# Set up environment variables for JavaFX
+ENV PATH="/usr/lib/jvm/javafx-sdk-21.0.2/bin:${PATH}"
+ENV JAVA_HOME="/usr/lib/jvm/default-jvm"
 
 # Create a directory for the application
 WORKDIR /app
