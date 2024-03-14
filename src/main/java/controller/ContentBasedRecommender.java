@@ -56,7 +56,7 @@ public class ContentBasedRecommender {
 
             // Fetch genres from API
             String genresResponse = ApiClient.getGenres();
-            List<String> genres = DataProcessor.processedGenresResponse(genresResponse);
+            //List<String> genres = DataProcessor.processedGenresResponse(genresResponse);
 
             // Here you would use the trained model to make predictions
             // and generate recommendations based on user preferences and genres
