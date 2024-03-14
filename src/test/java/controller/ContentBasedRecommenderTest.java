@@ -15,8 +15,11 @@ public class ContentBasedRecommenderTest {
         // Create an instance of ContentBasedRecommender
         ContentBasedRecommender recommender = new ContentBasedRecommender();
 
-        // Get movie recommendations based on the selected genres
-        List<String> recommendations = recommender.generateRecommendations(selectedGenres);
+        // Path to your dataset (this is an example path, adjust according to your actual dataset location)
+        String datasetPath = "path/to/your/dataset.arff";
+
+        // Get movie recommendations based on the selected genres and the dataset
+        List<String> recommendations = recommender.generateRecommendations(selectedGenres, datasetPath);
 
         // Print the recommendations
         System.out.println("Recommended movies:");

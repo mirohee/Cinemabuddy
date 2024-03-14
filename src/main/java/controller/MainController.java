@@ -45,17 +45,7 @@ public class MainController {
         // Set the scene with Register.fxml content
         stage.setScene(new Scene(homePageParent));
     }
-    @FXML
-    private void HomepageButtonClicked(ActionEvent event) throws IOException {
-        // Load the Register.fxml file
-        Parent homePageParent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
 
-        // Get the current stage
-        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-
-        // Set the scene with Register.fxml content
-        stage.setScene(new Scene(homePageParent));
-    }
     @FXML
     private void SearchButtonClicked(ActionEvent event) throws IOException {
         // Load the Register.fxml file
