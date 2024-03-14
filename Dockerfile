@@ -2,6 +2,7 @@ FROM maven:latest
 
 # Install javafx
 RUN apt-get update && \
+    apt-cache madison openjfx && \
     apt-get install -y openjfx=21.0.1 && \
     apt-get clean;
 
