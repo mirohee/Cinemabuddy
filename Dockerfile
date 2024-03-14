@@ -13,5 +13,15 @@ COPY src /app/src/
 # Run Maven package to build the project
 RUN mvn -DskipTests=true package
 
-CMD ["java", "-jar", "target/cinemabuddy.jar"]
+# Copy the compiled classes and resources to the container
+COPY target/classes /app/classes
+COPY target/libs /app/libs
+COPY src/main/resources /app/resources
+
+# Set the classpath to include the compiled classes and dependencies
+ENV CLASSPATH /app/target/classes:/app/target/libs/*
+
+CMD ["java", "-cp", "$CLASSPATH", "controller.MainController"]
+
+
 
