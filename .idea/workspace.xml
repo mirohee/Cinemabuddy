@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="added rating mode">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ClusterPlacement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Clustering.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/DataPreprocessing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/ShowClusterUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/ShowClusterUtilTest.java" afterDir="false" />
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="Someparts of potential machine learning work">
+      <change afterPath="$PROJECT_DIR$/data/cluster_position.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/GenreEncoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClusterPlacement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClusterPlacement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ShowClusterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ShowClusterUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/ShowClusterUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/ShowClusterUtilTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710433767602</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Someparts of potential machine learning work">
+      <option name="closed" value="true" />
+      <created>1710445824337</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710445824337</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +290,8 @@
     <MESSAGE value="More Scenes" />
     <MESSAGE value="All of the needed scenes and controller modifications" />
     <MESSAGE value="added rating mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="added rating mode" />
+    <MESSAGE value="Someparts of potential machine learning work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Someparts of potential machine learning work" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
