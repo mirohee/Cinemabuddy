@@ -23,7 +23,7 @@ public class MainController {
 
 
     @FXML
-    private void LoginButtonClicked(ActionEvent event) throws IOException {
+    public void LoginButtonClicked(ActionEvent event) throws IOException {
         // Load the Homepage.fxml file
         Parent homePageParent = FXMLLoader.load(getClass().getResource("/Login.fxml"));
 
