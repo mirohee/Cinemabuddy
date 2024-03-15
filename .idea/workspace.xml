@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="README and some tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/RESTapi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/RESTapi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DisplayResults.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DisplayResults.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DisplayResults.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DisplayResults.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MainController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +43,7 @@
     </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="content-based-recommender" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,8 +132,10 @@
       </method>
     </configuration>
     <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="controller.MainController" />
-      <module name="Cinemabuddy" />
+      <module name="cinemabuddy" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="controller.*" />
