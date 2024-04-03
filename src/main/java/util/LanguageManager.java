@@ -22,5 +22,8 @@ public class LanguageManager {
     public void changeLanguage(String lang, String country){
         loadLanguage(lang, country);
     }
+    public ResourceBundle getResourceBundle() {
+        return bundle;
+    }
 
 }

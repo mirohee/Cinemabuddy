@@ -31,13 +31,13 @@
         <!-- VBox to center content -->
         <VBox fx:id="resultCardsContainer" spacing="20.0">
             <!-- Label for search bar -->
-            <Label text="mitä?" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+            <Label fx:id="searchLabelText" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
             <!-- HBox to center search bar -->
             <HBox alignment="CENTER" spacing="10.0">
                 <!-- Text field for entering search query -->
                 <TextField fx:id="searchField" promptText="Enter your search query" style="-fx-font-size: 18px; -fx-pref-width: 300px; -fx-background-color: #ffffff; -fx-text-fill: #000000;" />
                 <!-- Button to submit search -->
-                <Button text="Search" style="-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 18px; -fx-padding: 10px 20px; -fx-cursor: hand;"
+                <Button fx:id="searchButton" style="-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 18px; -fx-padding: 10px 20px; -fx-cursor: hand;"
                         onAction="#SearchButtonClicked" />
             </HBox>
         </VBox>
