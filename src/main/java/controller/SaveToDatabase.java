@@ -22,8 +22,4 @@ public class SaveToDatabase {
         return connection;
     }
 
-    public static void main(String[] args) {
-        SaveToDatabase saveToDatabase = new SaveToDatabase();
-        saveToDatabase.getConnectionToDb();
-    }
 }

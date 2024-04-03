@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="README and some tests">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_2024__22_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_2024__22_44__Changes_.xml" afterDir="false" />
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="added SaveToDatabase test and fixed UserControllerTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SaveToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SaveToDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/SaveToDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/SaveToDatabaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ContentBasedRecommender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ContentBasedRecommender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/SaveToDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SaveToDatabase.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +113,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RESTapi">
+  <component name="RunManager" selected="JUnit.SaveToDatabaseTest (1)">
     <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -196,10 +189,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SaveToDatabaseTest (1)" />
         <item itemvalue="Application.RESTapi" />
         <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.RegisterControllerTest" />
-        <item itemvalue="JUnit.SaveToDatabaseTest (1)" />
         <item itemvalue="Application.MainController" />
       </list>
     </recent_temporary>
@@ -234,7 +227,7 @@
       <workItem from="1710430511939" duration="1008000" />
       <workItem from="1710432197772" duration="3738000" />
       <workItem from="1711021143595" duration="45000" />
-      <workItem from="1712164105149" duration="4580000" />
+      <workItem from="1712164105149" duration="5378000" />
     </task>
     <task id="LOCAL-00001" summary="Loginpage">
       <option name="closed" value="true" />
@@ -276,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709844814630</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added SaveToDatabase test and fixed UserControllerTest">
+      <option name="closed" value="true" />
+      <created>1712168896921</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712168896922</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +300,8 @@
     <MESSAGE value="More Scenes" />
     <MESSAGE value="All of the needed scenes and controller modifications" />
     <MESSAGE value="README and some tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="README and some tests" />
+    <MESSAGE value="added SaveToDatabase test and fixed UserControllerTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="added SaveToDatabase test and fixed UserControllerTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

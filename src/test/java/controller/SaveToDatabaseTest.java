@@ -24,13 +24,13 @@ public class SaveToDatabaseTest {
 
     @Test
     public void testConnectionToDb() {
-        Connection connection = saveToDatabase.getConnectionToDb();
-
-        assertNotNull(connection, "Connection should not be null");
         try {
+            Connection connection = saveToDatabase.getConnectionToDb();
+
+            assertNotNull(connection, "Connection should not be null");
             assertFalse(connection.isClosed(), "Connection should be open");
         } catch (SQLException e) {
-            fail("Error checking connection status: " + e.getMessage());
+            fail("SQLException occurred: " + e.getMessage());
         }
     }
 }
