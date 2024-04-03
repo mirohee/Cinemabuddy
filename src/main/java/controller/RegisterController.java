@@ -10,6 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.User;
+import util.LanguageManager;
 
 import java.io.IOException;
 
@@ -29,6 +30,29 @@ public class RegisterController {
 
     @FXML
     private PasswordField passwordField;
+
+    @FXML
+    private Button registerButton;
+
+    private LanguageManager languageManager;
+
+    @FXML
+    public void initialize() {
+        languageManager = new LanguageManager();
+        languageManager.initialize();
+
+        updateUI();
+    }
+
+    private void updateUI() {
+        firstNameField.setPromptText(languageManager.getString("firstname"));
+        lastNameField.setPromptText(languageManager.getString("lastname"));
+        emailField.setPromptText(languageManager.getString("email"));
+        ageField.setPromptText(languageManager.getString("age"));
+        passwordField.setPromptText(languageManager.getString("password"));
+        registerButton.setText(languageManager.getString("register"));
+    }
+
 
     @FXML
     private void RegisterButtonClicked(ActionEvent event) throws IOException {

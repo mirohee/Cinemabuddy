@@ -19,6 +19,9 @@ import model.ShowParser;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
+
+import util.LanguageManager;
 
 public class MainController {
 
@@ -27,14 +30,29 @@ public class MainController {
 
     @FXML
     private Label showInfoTextArea;
+
     @FXML
     private VBox resultCardsContainer;
 
     @FXML
-    public void initialize() {
-        System.out.println("MainController initialized");
-    }
+    private Button loginButton;
 
+    @FXML
+    private Button registerButton;
+
+    private LanguageManager languageManager;
+    @FXML
+    public void initialize() {
+        languageManager = new LanguageManager();
+        languageManager.initialize();
+        System.out.println("MainController initialized");
+
+        localizeUI();
+    }
+    private void localizeUI() {
+        registerButton.setText(languageManager.getString("register"));
+        loginButton.setText(languageManager.getString("login"));
+    }
 
 
     @FXML

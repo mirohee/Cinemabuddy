@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import util.LanguageManager;
 
 import java.io.IOException;
 
@@ -19,6 +20,24 @@ public class LoginController {
 
     @FXML
     private PasswordField passwordField;
+    @FXML
+    private Button loginButton;
+
+    private LanguageManager languageManager;
+
+    @FXML
+    public void initialize() {
+        languageManager = new LanguageManager();
+        languageManager.initialize();
+
+        updateUI();
+    }
+
+    private void updateUI() {
+        emailField.setPromptText(languageManager.getString("email"));
+        passwordField.setPromptText(languageManager.getString("password"));
+        loginButton.setText(languageManager.getString("login"));
+    }
 
     @FXML
     private void LoginButtonClicked(ActionEvent event) throws IOException {
