@@ -18,10 +18,11 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import model.Show;
 import model.ShowParser;
+import util.LanguageManager;
+
+import java.util.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomeController {
 
@@ -35,11 +36,27 @@ public class HomeController {
     private TextField searchField;
 
     @FXML
+    private Label searchLabelText;
+
+    @FXML
     private Button searchButton;
+
+    private LanguageManager languageManager;
+
+     private ResourceBundle bundle;
 
     @FXML
     private void initialize() {
-        // You can perform any initialization tasks here
+        languageManager = new LanguageManager();
+        languageManager.initialize();
+        bundle = languageManager.getResourceBundle();
+
+        localizeUI();
+    }
+    private void localizeUI() {
+        searchLabelText.setText(languageManager.getString("searchtext"));
+        searchButton.setText(languageManager.getString("searchbutton"));
+        searchField.setPromptText(languageManager.getString("searchinput"));
     }
 
     @FXML
@@ -100,13 +117,13 @@ public class HomeController {
         VBox resultCard = new VBox(10);
         resultCard.setStyle("-fx-background-color: #ffffff; -fx-padding: 10px;");
 
-        Label titleLabel = new Label("Title: " + show.getName());
+        Label titleLabel = new Label(bundle.getString("title") + ": " + show.getName());
         titleLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #000000;");
-        Label ratingLabel = new Label("Rating: " + show.getRating().getAverage());
+        Label ratingLabel = new Label(bundle.getString("rating") + ": " + show.getRating().getAverage());
         ratingLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
-        Label genreLabel = new Label("Genre: " + String.join(", ", show.getGenres()));
+        Label genreLabel = new Label(bundle.getString("genre") + ": " + String.join(", ", show.getGenres()));
         genreLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
-        Label releaseYearLabel = new Label("Premiered: " + show.getPremiered());
+        Label releaseYearLabel = new Label(bundle.getString("premiered") + ": " + show.getPremiered());
         releaseYearLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
 
         resultCard.getChildren().addAll(titleLabel, ratingLabel, genreLabel, releaseYearLabel);
