@@ -19,6 +19,7 @@ public class UserControllerTest {
     @Before
     public void setUp() {
         userController = new UserController();
+        testUser = new User("Joe", "Biden", "joe.biden@example.com", "30", "password123");
     }
 
     @After
@@ -34,7 +35,6 @@ public class UserControllerTest {
     @Test
     public void testUserRegistration() {
         // Test user registration
-        testUser = new User("Joe", "Biden", "joe.biden@example.com", "30", "password123");
         boolean registrationResult = userController.registerUser(testUser);
 
         assertTrue("User registration should be successful.", registrationResult);
