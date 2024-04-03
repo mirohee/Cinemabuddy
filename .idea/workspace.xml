@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="fixed SaveToDatabaseTest">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="new UserControllerTest">
       <change beforePath="$PROJECT_DIR$/src/test/java/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/DataProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/TitleInfo.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +230,7 @@
       <workItem from="1710432197772" duration="3738000" />
       <workItem from="1711021143595" duration="45000" />
       <workItem from="1712164105149" duration="4580000" />
-      <workItem from="1712173045071" duration="2644000" />
+      <workItem from="1712173045071" duration="3038000" />
     </task>
     <task id="LOCAL-00001" summary="Loginpage">
       <option name="closed" value="true" />
@@ -287,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712174465042</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new UserControllerTest">
+      <option name="closed" value="true" />
+      <created>1712176039819</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712176039819</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +322,8 @@
     <MESSAGE value="Added working login and registration localization but maincontoller does not work" />
     <MESSAGE value="added the files for localisation" />
     <MESSAGE value="fixed SaveToDatabaseTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed SaveToDatabaseTest" />
+    <MESSAGE value="new UserControllerTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="new UserControllerTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

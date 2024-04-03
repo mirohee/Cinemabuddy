@@ -1,14 +1,16 @@
 package controller;
 
 import model.User;
-import org.junit.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.Assert.*;
 
 public class UserControllerTest {
 
     private static UserController userController;
 
-    @BeforeClass
+    @BeforeAll
     public static void setUp() {
         userController = new UserController();
     }
