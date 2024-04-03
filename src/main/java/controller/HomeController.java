@@ -6,15 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.LinearGradient;
-import javafx.scene.paint.Stop;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import model.Show;
 import model.ShowParser;
@@ -40,20 +33,25 @@ public class HomeController {
 
     @FXML
     private Button searchButton;
+    @FXML
+    private ComboBox<String> languageComboBox;
 
     private LanguageManager languageManager;
 
-     private ResourceBundle bundle;
+    @FXML
+    public void initialize() {
+        languageManager = LanguageManager.getInstance();
+        languageManager.addLanguageSelector(languageComboBox);
+        updateUIWithLocalizedText();
+    }
 
     @FXML
-    private void initialize() {
-        languageManager = new LanguageManager();
-        languageManager.initialize();
-        bundle = languageManager.getResourceBundle();
-
-        localizeUI();
+    private void handleLanguageSelection(ActionEvent event) {
+        languageManager.handleLanguageSelection(event);
+        updateUIWithLocalizedText();
     }
-    private void localizeUI() {
+
+    private void updateUIWithLocalizedText() {
         searchLabelText.setText(languageManager.getString("searchtext"));
         searchButton.setText(languageManager.getString("searchbutton"));
         searchField.setPromptText(languageManager.getString("searchinput"));
@@ -117,13 +115,13 @@ public class HomeController {
         VBox resultCard = new VBox(10);
         resultCard.setStyle("-fx-background-color: #ffffff; -fx-padding: 10px;");
 
-        Label titleLabel = new Label(bundle.getString("title") + ": " + show.getName());
+        Label titleLabel = new Label(languageManager.getString("title") + ": " + show.getName());
         titleLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #000000;");
-        Label ratingLabel = new Label(bundle.getString("rating") + ": " + show.getRating().getAverage());
+        Label ratingLabel = new Label(languageManager.getString("rating") + ": " + show.getRating().getAverage());
         ratingLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
-        Label genreLabel = new Label(bundle.getString("genre") + ": " + String.join(", ", show.getGenres()));
+        Label genreLabel = new Label(languageManager.getString("genre") + ": " + String.join(", ", show.getGenres()));
         genreLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
-        Label releaseYearLabel = new Label(bundle.getString("premiered") + ": " + show.getPremiered());
+        Label releaseYearLabel = new Label(languageManager.getString("premiered") + ": " + show.getPremiered());
         releaseYearLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
 
         resultCard.getChildren().addAll(titleLabel, ratingLabel, genreLabel, releaseYearLabel);

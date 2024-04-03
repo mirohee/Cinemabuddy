@@ -5,9 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import model.User;
 import util.LanguageManager;
@@ -34,17 +32,23 @@ public class RegisterController {
     @FXML
     private Button registerButton;
 
+    @FXML
+    private ComboBox<String> languageComboBox;
+
     private LanguageManager languageManager;
 
     @FXML
     public void initialize() {
-        languageManager = new LanguageManager();
-        languageManager.initialize();
-
-        updateUI();
+        languageManager = LanguageManager.getInstance();
+        languageManager.addLanguageSelector(languageComboBox);
+        updateUIWithLocalizedText();
     }
-
-    private void updateUI() {
+    @FXML
+    private void handleLanguageSelection(ActionEvent event) {
+        languageManager.handleLanguageSelection(event);
+        updateUIWithLocalizedText();
+    }
+    private void updateUIWithLocalizedText() {
         firstNameField.setPromptText(languageManager.getString("firstname"));
         lastNameField.setPromptText(languageManager.getString("lastname"));
         emailField.setPromptText(languageManager.getString("email"));
@@ -52,7 +56,6 @@ public class RegisterController {
         passwordField.setPromptText(languageManager.getString("password"));
         registerButton.setText(languageManager.getString("register"));
     }
-
 
     @FXML
     private void RegisterButtonClicked(ActionEvent event) throws IOException {

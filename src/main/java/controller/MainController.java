@@ -6,22 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import view.App;
-import api.TvApi;
-import model.Show;
-import model.ShowParser;
-
+import util.LanguageManager;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-
-import util.LanguageManager;
 
 public class MainController {
 
@@ -40,20 +33,29 @@ public class MainController {
     @FXML
     private Button registerButton;
 
+    @FXML
+    private ComboBox<String> languageComboBox;
+
     private LanguageManager languageManager;
+
     @FXML
     public void initialize() {
-        languageManager = new LanguageManager();
-        languageManager.initialize();
+        languageManager = LanguageManager.getInstance();
+        languageManager.addLanguageSelector(languageComboBox);
         System.out.println("MainController initialized");
-
-        localizeUI();
+        updateUIWithLocalizedText();
     }
-    private void localizeUI() {
+
+    @FXML
+    private void handleLanguageSelection(ActionEvent event) {
+        languageManager.handleLanguageSelection(event);
+        updateUIWithLocalizedText();
+    }
+
+    private void updateUIWithLocalizedText() {
         registerButton.setText(languageManager.getString("register"));
         loginButton.setText(languageManager.getString("login"));
     }
-
 
     @FXML
     private void LoginButtonClicked(ActionEvent event) throws IOException {
@@ -65,6 +67,10 @@ public class MainController {
 
         // Set the scene with Homepage.fxml content
         stage.setScene(new Scene(homePageParent));
+
+        // Localization
+
+
     }
 
     @FXML
@@ -78,6 +84,7 @@ public class MainController {
         // Set the scene with Register.fxml content
         stage.setScene(new Scene(homePageParent));
     }
+
     @FXML
     private void HomepageButtonClicked(ActionEvent event) throws IOException {
         // Load the Register.fxml file
@@ -89,10 +96,12 @@ public class MainController {
         // Set the scene with Register.fxml content
         stage.setScene(new Scene(homePageParent));
     }
-    public static void main (String[]args){
+
+    public static void main(String[] args) {
         App.launch(App.class);
     }
 }
+
 
 
 

@@ -5,9 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import util.LanguageManager;
 
@@ -22,23 +20,29 @@ public class LoginController {
     private PasswordField passwordField;
     @FXML
     private Button loginButton;
+    @FXML
+    private ComboBox<String> languageComboBox;
 
     private LanguageManager languageManager;
 
     @FXML
     public void initialize() {
-        languageManager = new LanguageManager();
-        languageManager.initialize();
-
-        updateUI();
+        languageManager = LanguageManager.getInstance();
+        languageManager.addLanguageSelector(languageComboBox);
+        updateUIWithLocalizedText();
     }
 
-    private void updateUI() {
+    @FXML
+    private void handleLanguageSelection(ActionEvent event) {
+        languageManager.handleLanguageSelection(event);
+        updateUIWithLocalizedText();
+    }
+
+    private void updateUIWithLocalizedText() {
         emailField.setPromptText(languageManager.getString("email"));
         passwordField.setPromptText(languageManager.getString("password"));
         loginButton.setText(languageManager.getString("login"));
     }
-
     @FXML
     private void LoginButtonClicked(ActionEvent event) throws IOException {
         String email = emailField.getText();

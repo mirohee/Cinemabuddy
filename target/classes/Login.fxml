@@ -8,6 +8,7 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.ComboBox?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController" alignment="CENTER" spacing="20.0">
     <StackPane>
         <Rectangle width="800.0" height="600.0">
@@ -35,6 +36,7 @@
                 <Button fx:id="loginButton" style="-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 18px; -fx-padding: 10px 20px; -fx-cursor: hand;"
                         onAction="#LoginButtonClicked" />
             </HBox>
+            <ComboBox fx:id="languageComboBox" onAction="#handleLanguageSelection" promptText="Select Language"/>
         </VBox>
     </StackPane>
 </VBox>

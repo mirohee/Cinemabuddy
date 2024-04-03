@@ -22,7 +22,7 @@ public class App extends Application {
         Parent root = FXMLLoader.load(getClass().getResource(MAIN_VIEW_PATH));
 
         // Set up the scene
-        Scene scene = new Scene(new VBox(root), 600, 400);
+        Scene scene = new Scene(new VBox(root), 800, 600);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Cinemabuddy");
         primaryStage.show();

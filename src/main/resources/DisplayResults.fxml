@@ -33,6 +33,7 @@
                     
                 </StackPane>
             </VBox>
+            <ComboBox fx:id="languageComboBox" onAction="#handleLanguageSelection" promptText="Select Language"/>
         </VBox>
     </StackPane>
 </VBox>
