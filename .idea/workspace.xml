@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="added the files for localisation">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_2024__22_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_2024__22_44__Changes_.xml" afterDir="false" />
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="fixed SaveToDatabaseTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/UserControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/view" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SaveToDatabaseTest">
+  <component name="RunManager" selected="JUnit.UserControllerTest">
     <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -191,10 +190,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.SaveToDatabaseTest" />
         <item itemvalue="Application.MainController" />
         <item itemvalue="Application.RESTapi" />
-        <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.RegisterControllerTest" />
       </list>
     </recent_temporary>
@@ -230,7 +229,7 @@
       <workItem from="1710432197772" duration="3738000" />
       <workItem from="1711021143595" duration="45000" />
       <workItem from="1712164105149" duration="4580000" />
-      <workItem from="1712173045071" duration="896000" />
+      <workItem from="1712173045071" duration="2644000" />
     </task>
     <task id="LOCAL-00001" summary="Loginpage">
       <option name="closed" value="true" />
@@ -280,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712169791387</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed SaveToDatabaseTest">
+      <option name="closed" value="true" />
+      <created>1712174465042</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712174465042</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +312,8 @@
     <MESSAGE value="README and some tests" />
     <MESSAGE value="Added working login and registration localization but maincontoller does not work" />
     <MESSAGE value="added the files for localisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the files for localisation" />
+    <MESSAGE value="fixed SaveToDatabaseTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed SaveToDatabaseTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

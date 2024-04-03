@@ -1,62 +1,59 @@
 package controller;
 
-import controller.UserController;
 import model.User;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 public class UserControllerTest {
 
-    private UserController userController;
+    private static UserController userController;
 
-    // The user created during registration for cleanup
-    private User testUser;
-
-    @Before
-    public void setUp() {
+    @BeforeClass
+    public static void setUp() {
         userController = new UserController();
-        testUser = new User("Joe", "Biden", "joe.biden@example.com", "30", "password123");
-    }
-
-    @After
-    public void tearDown() {
-        // Delete the user created during registration
-        if (testUser != null) {
-            userController.deleteUser(testUser.getEmail());
-        }
     }
 
 
 
     @Test
-    public void testUserRegistration() {
-        // Test user registration
-        boolean registrationResult = userController.registerUser(testUser);
-
-        assertTrue("User registration should be successful.", registrationResult);
+    public void testRegisterUser() {
+        User newUser = new User("test", "case", "testcase@example.com", "30", "abcef go");
+        assertTrue(userController.registerUser(newUser));
+        // Verify that the user was successfully added to the database
+        assertNotNull(userController.getUserByEmail(newUser.getEmail()));
     }
 
     @Test
-    public void testUserLogin() {
-        // Test user login
-        String loginEmail = "john.doe@example.com";
-        String loginPassword = "password123";
-        boolean loginResult = userController.loginUser(loginEmail, loginPassword);
-
-        assertTrue("User login should be successful.", loginResult);
+    public void testRegisterUserDuplicateEmail() {
+        User existingUser = new User("John", "Pork", "testuser@gmail.com", "25", "testpassword");
+        assertFalse(userController.registerUser(existingUser));
     }
 
     @Test
-    public void testInvalidUserLogin() {
-        // Test user login with invalid credentials
-        String loginEmail = "nonexistent.user@example.com";
-        String loginPassword = "invalidPassword";
-        boolean loginResult = userController.loginUser(loginEmail, loginPassword);
+    public void testLoginUser() {
+        userController.registerUser(new User("Jane", "Doe", "jane.doe@example.com", "30", "password"));
+        assertTrue(userController.loginUser("jane.doe@example.com", "password"));
+    }
 
-        assertFalse("User login with invalid credentials should fail.", loginResult);
+    @Test
+    public void testLoginUserInvalidCredentials() {
+        assertFalse(userController.loginUser("nonexistent@example.com", "password"));
+    }
+
+    @Test
+    public void testGetUserByEmail() {
+        assertNotNull(userController.getUserByEmail("jane.doe@example.com"));
+    }
+
+    @Test
+    public void testGetUserByEmailNonexistent() {
+        assertNull(userController.getUserByEmail("nonexistent@example.com"));
+    }
+
+    @Test
+    public void testDeleteUser() {
+        assertTrue(userController.deleteUser("testcase@example.com"));
+        // Verify that the user was successfully deleted from the database
+        assertNull(userController.getUserByEmail("testcase@example.com"));
     }
 }
