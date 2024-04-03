@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="README and some tests">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_2024__22_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_2024__22_44__Changes_.xml" afterDir="false" />
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="added the files for localisation">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SaveToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SaveToDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/SaveToDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/SaveToDatabaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ContentBasedRecommender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ContentBasedRecommender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/SaveToDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SaveToDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MainController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +97,9 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "testcases",
+    "git-widget-placeholder": "localization",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/Users/ketimandunga/SimulationProject/Cinemabuddy/src/main/java",
@@ -120,7 +122,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RESTapi">
+  <component name="RunManager" selected="Application.MainController">
     <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -164,7 +166,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SaveToDatabaseTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SaveToDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cinemabuddy" />
       <extension name="coverage">
         <pattern>
@@ -196,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainController" />
         <item itemvalue="Application.RESTapi" />
         <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.RegisterControllerTest" />
         <item itemvalue="JUnit.SaveToDatabaseTest (1)" />
-        <item itemvalue="Application.MainController" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709844814630</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added the files for localisation">
+      <option name="closed" value="true" />
+      <created>1712169791387</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712169791387</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +309,9 @@
     <MESSAGE value="More Scenes" />
     <MESSAGE value="All of the needed scenes and controller modifications" />
     <MESSAGE value="README and some tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="README and some tests" />
+    <MESSAGE value="Added working login and registration localization but maincontoller does not work" />
+    <MESSAGE value="added the files for localisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the files for localisation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

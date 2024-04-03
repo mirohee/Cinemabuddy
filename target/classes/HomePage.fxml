@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController" alignment="CENTER" spacing="20.0">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController" alignment="CENTER" spacing="20.0">
     <Label fx:id="showInfoTextArea" style="-fx-font-size: 14px; -fx-text-fill: #000000;" />
     <!-- Create a StackPane to hold the background and content -->
     <StackPane>
