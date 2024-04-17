@@ -17,7 +17,7 @@ public class TvApi {
     private static final String BASE_URL = "https://api.tvmaze.com";
 
     // Method that makes api calls so it can be reused
-    private static String makeApiCall(String endpoint) throws IOException {
+    public static String makeApiCall(String endpoint) throws IOException {
         URL url = new URL(endpoint);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
@@ -52,38 +52,8 @@ public class TvApi {
         return makeApiCall(endpoint);
     }
 
-    public static String showLookupByTvrage(String id) throws IOException {
-        String endpoint = BASE_URL + "/lookup/shows?tvrage=" + id;
-        return makeApiCall(endpoint);
-    }
-
-    public static String showLookupByThetvdb(String id) throws IOException {
-        String endpoint = BASE_URL + "/lookup/shows?thetvdb=" + id;
-        return makeApiCall(endpoint);
-    }
-
     public static String peopleSearch(String query) throws IOException {
         String endpoint = BASE_URL + "/search/people?q=" + query;
-        return makeApiCall(endpoint);
-    }
-
-    public static String getSchedule(String country, String date) throws IOException {
-        String endpoint = BASE_URL + "/schedule?country=" + country + "&date=" + date;
-        return makeApiCall(endpoint);
-    }
-
-    public static String getWebStreamingSchedule(String country, String date) throws IOException {
-        String endpoint = BASE_URL + "/schedule/web?country=" + country + "&date=" + date;
-        return makeApiCall(endpoint);
-    }
-
-    public static String getFullSchedule() throws IOException {
-        String endpoint = BASE_URL + "/schedule/full";
-        return makeApiCall(endpoint);
-    }
-
-    public static String getShowMainInfo(String id) throws IOException {
-        String endpoint = BASE_URL + "/shows/" + id;
         return makeApiCall(endpoint);
     }
 
