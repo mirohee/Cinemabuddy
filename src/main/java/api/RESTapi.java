@@ -41,23 +41,4 @@ public class RESTapi {
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         return response.body();
     }
-
-    public static void main(String[] args) throws Exception {
-        RESTapi apiClient = new RESTapi();
-        Scanner scanner = new Scanner(System.in); // Create a Scanner object
-
-        // Ask for the show name
-        System.out.println("Enter show name:");
-        String showName = scanner.nextLine(); // Read user input
-
-        // Ask for the number of recommendations
-        System.out.println("Enter number of recommendations:");
-        int numRecommendations = scanner.nextInt(); // Read user input
-
-        // Fetch and display the search results
-        String searchResult = apiClient.searchAndRecommendShows(showName, numRecommendations);
-        System.out.println(searchResult);
-
-        scanner.close(); // Close the scanner
-    }
 }

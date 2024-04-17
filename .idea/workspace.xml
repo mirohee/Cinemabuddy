@@ -4,33 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="Localization ComboBox.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_2024__22_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_2024__22_44__Changes_.xml" afterDir="false" />
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="added localization to the ResultCard">
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/RESTapiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/LanguageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/LanguageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DisplayResults.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DisplayResults.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HomePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DisplayResults.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DisplayResults.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HomePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/LanguageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/LanguageManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/RESTapi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/RESTapi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/htmlReport" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,7 +100,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "api-test",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/Users/ketimandunga/SimulationProject/Cinemabuddy/src/main/java",
@@ -133,7 +123,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainController">
+  <component name="RunManager" selected="JUnit.RESTapiTest">
     <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -162,16 +152,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RESTapiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cinemabuddy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value="api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.RegisterControllerTest" />
+      <option name="PACKAGE_NAME" value="api" />
+      <option name="MAIN_CLASS_NAME" value="api.RESTapiTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -209,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RESTapiTest" />
         <item itemvalue="Application.MainController" />
         <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.SaveToDatabaseTest" />
         <item itemvalue="Application.RESTapi" />
-        <item itemvalue="JUnit.RegisterControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +240,8 @@
       <workItem from="1712164105149" duration="4580000" />
       <workItem from="1712173045071" duration="3038000" />
       <workItem from="1712177091674" duration="8774000" />
+      <workItem from="1713380995498" duration="21000" />
+      <workItem from="1713381027488" duration="4008000" />
     </task>
     <task id="LOCAL-00001" summary="Loginpage">
       <option name="closed" value="true" />
@@ -350,6 +342,9 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cinemabuddy$RESTapiTest.ic" NAME="RESTapiTest Coverage Results" MODIFIED="1713384103442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>api.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Cinemabuddy$ML.coverage" NAME="ML Coverage Results" MODIFIED="1710457273297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/Python/API" />
   </component>
 </project>
