@@ -59,34 +59,24 @@ public class HomeController {
 
     @FXML
     private void SearchButtonClicked(ActionEvent event) throws IOException {
-        // Get the search query from the text field
         String searchQuery = searchField.getText();
-
-        // Make API call to search for shows
         String response = TvApi.searchSingleShow(searchQuery);
-
-        // Parse the response
         ShowParser showParser = new ShowParser();
         Show show = showParser.parseJsonResponse(response);
 
-        // Display the show information on the search results page
-        showInfoTextArea.setText("Name: " + show.getName() + "\n"
-                + "Type: " + show.getType() + "\n"
-                + "Genres: " + String.join(", ", show.getGenres()) + "\n"
-                + "Status: " + show.getStatus() + "\n"
-                + "Runtime: " + show.getRuntime() + " minutes\n"
-                + "Premiered: " + show.getPremiered() + "\n"
-                + "Rating: " + show.getRating().getAverage() + "\n"
-                + "Summary: " + show.getSummary());
+        showInfoTextArea.setText(languageManager.getString("title") + ": " + show.getName() + "\n"
+                + languageManager.getString("type") + ": " + show.getType() + "\n"
+                + languageManager.getString("genre") + ": " + String.join(", ", show.getGenres()) + "\n"
+                + languageManager.getString("status") + ": " + show.getStatus() + "\n"
+                + languageManager.getString("runtime") + ": " + show.getRuntime() + " minutes\n"
+                + languageManager.getString("premiered") + ": " + show.getPremiered() + "\n"
+                + languageManager.getString("rating") + ": " + show.getRating().getAverage() + "\n"
+                + languageManager.getString("summary") + ": " + show.getSummary());
 
-        // Create a list to hold the single show
         List<Show> shows = new ArrayList<>();
         shows.add(show);
-
-        // Display search results
         displaySearchResults(shows);
 
-        // Load the search results page after displaying search results
         Parent searchResultsParent = FXMLLoader.load(getClass().getResource("/DisplayResults.fxml"));
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(searchResultsParent));
@@ -95,15 +85,12 @@ public class HomeController {
     @FXML
     private void HistoryButtonClicked(ActionEvent event) throws IOException {
         Parent homePageParent = FXMLLoader.load(getClass().getResource("/WatchHistory.fxml"));
-
-        // Get the current stage
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-
-        // Set the scene with Register.fxml content
         stage.setScene(new Scene(homePageParent));
     }
+
     private void displaySearchResults(List<Show> shows) {
-        resultCardsContainer.getChildren().clear(); // Clear previous results
+        resultCardsContainer.getChildren().clear();
 
         for (Show show : shows) {
             VBox resultCard = createResultCard(show);

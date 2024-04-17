@@ -47,7 +47,6 @@ public class LoginController {
         emailField.setPromptText(languageManager.getString("email"));
         passwordField.setPromptText(languageManager.getString("password"));
         loginButton.setText(languageManager.getString("login"));
-        errorLabel.setText(""); // Clear the error message initially
     }
 
     @FXML
