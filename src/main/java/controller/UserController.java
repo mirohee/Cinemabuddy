@@ -11,15 +11,25 @@ import java.sql.SQLException;
 public class UserController {
 //add error handling
     private SaveToDatabase saveToDatabase;
+    private String errorMessage;
 
     public UserController() {
         this.saveToDatabase = new SaveToDatabase();
     }
 
     public boolean registerUser(User user) {
+        // Check if any of the fields are empty
+        if (user.getFirstname().isEmpty() || user.getLastname().isEmpty() || user.getEmail().isEmpty()
+                || user.getAge().isEmpty() || user.getPassword().isEmpty()) {
+            System.out.println("All fields are required.");
+            errorMessage = "All fields are required.";
+            return false;
+        }
+
         // Check if the user with the given email already exists
         if (getUserByEmail(user.getEmail()) != null) {
             System.out.println("User with this email already exists.");
+            errorMessage = "User with this email already exists.";
             return false;
         }
 
@@ -39,9 +49,11 @@ public class UserController {
 
         } catch (SQLException e) {
             System.out.println("Error registering user: " + e.getMessage());
+            errorMessage = "Error registering user: " + e.getMessage();
             return false;
         }
     }
+
 
     public boolean loginUser(String email, String password) {
         User user = getUserByEmail(email);
@@ -95,4 +107,7 @@ public class UserController {
         }
     }
 
+    public String getErrorMessage() {
+        return errorMessage;
+    }
 }

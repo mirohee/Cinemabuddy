@@ -33,6 +33,9 @@ public class RegisterController {
     private Button registerButton;
 
     @FXML
+    private Label errorLabel;
+
+    @FXML
     private ComboBox<String> languageComboBox;
 
     private LanguageManager languageManager;
@@ -55,6 +58,7 @@ public class RegisterController {
         ageField.setPromptText(languageManager.getString("age"));
         passwordField.setPromptText(languageManager.getString("password"));
         registerButton.setText(languageManager.getString("register"));
+        errorLabel.setText(languageManager.getString("registerError"));
     }
 
     @FXML
@@ -83,6 +87,7 @@ public class RegisterController {
 
         } else {
             // Registration failed, show error message or take appropriate action
+            errorLabel.setText(userController.getErrorMessage());
             System.out.println("Registration failed.");
         }
     }
