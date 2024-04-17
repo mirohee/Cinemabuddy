@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="LanguageManagerTest added" />
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="LanguageManagerTest added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_fa_IR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_fa_IR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_fin_FI.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_fin_FI.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_en_UK.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/languages_fa_IR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_fa_IR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/languages_fin_FI.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_fin_FI.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,58 +77,59 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.HomeController.executor": "Run",
-    "Application.HomepageController.executor": "Run",
-    "Application.JavaFx.executor": "Run",
-    "Application.LoginPage.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainController.executor": "Run",
-    "Application.MainControllerTest.executor": "Run",
-    "Application.SaveToDatabase.executor": "Run",
-    "Application.TvApiTest.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.All in Cinemabuddy.executor": "Run",
-    "JUnit.AppTest.executor": "Run",
-    "JUnit.MainControllerTest.executor": "Run",
-    "JUnit.MainControllerTest.start.executor": "Run",
-    "JUnit.MainControllerTest.testLoginButtonClicked.executor": "Run",
-    "JUnit.MainControllerTest.testSearchButtonClicked.executor": "Run",
-    "JUnit.SaveToDatabaseTest.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "apiclienttest",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/Users/ketimandunga/SimulationProject/Cinemabuddy/src/main/java",
-    "last_opened_file_path": "C:/Users/saari/Documents/dev/software-engineering-2/UILocalizationHomeAssignment",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HomeController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HomepageController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JavaFx.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoginPage.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SaveToDatabase.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TvApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.All in Cinemabuddy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in cinemabuddy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainControllerTest.start.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainControllerTest.testLoginButtonClicked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainControllerTest.testSearchButtonClicked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SaveToDatabaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/ketimandunga/SimulationProject/Cinemabuddy/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/saari/Documents/dev/software-engineering-2/UILocalizationHomeAssignment&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/view" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in cinemabuddy">
+  <component name="RunManager">
     <configuration name="All in cinemabuddy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cinemabuddy" />
       <option name="PACKAGE_NAME" value="" />

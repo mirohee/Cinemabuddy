@@ -18,8 +18,13 @@ public class LoginController {
 
     @FXML
     private PasswordField passwordField;
+
     @FXML
     private Button loginButton;
+
+    @FXML
+    private Label errorLabel;
+
     @FXML
     private ComboBox<String> languageComboBox;
 
@@ -42,8 +47,8 @@ public class LoginController {
         emailField.setPromptText(languageManager.getString("email"));
         passwordField.setPromptText(languageManager.getString("password"));
         loginButton.setText(languageManager.getString("login"));
+        errorLabel.setText(""); // Clear the error message initially
     }
-
 
     @FXML
     private void LoginButtonClicked(ActionEvent event) throws IOException {
@@ -55,18 +60,18 @@ public class LoginController {
             // Login successful, perform desired actions
             System.out.println("Login successful!");
 
-            // Load the Register.fxml file
+            // Load the HomePage.fxml file
             Parent homePageParent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
 
             // Get the current stage
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
 
-            // Set the scene with Register.fxml content
+            // Set the scene with HomePage.fxml content
             stage.setScene(new Scene(homePageParent));
 
         } else {
             // Invalid credentials, show error message or take appropriate action
-            System.out.println(languageManager.getString("invalid_credentials"));
+            errorLabel.setText(languageManager.getString("loginError"));
         }
     }
 }
