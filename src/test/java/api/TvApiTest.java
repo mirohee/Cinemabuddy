@@ -1,63 +1,131 @@
 package api;
 
-import model.Show;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 public class TvApiTest {
-    public static void main(String[] args) {
-        testApiCall();
+
+    @Mock
+    private HttpURLConnection connection;
+
+    @BeforeEach
+    public void setUp() throws Exception {
+        MockitoAnnotations.openMocks(this);
     }
 
-    public static void testApiCall() {
-        // Create an instance of ApiClient
-        TvApi tvApi = new TvApi();
+    // Search Show Tests
+    @Test
+    public void testSearchShow_Success() throws IOException {
+        String expectedStart = "[{"; // Capture initial characters of the array
 
-        try {
-            String show = TvApi.searchShowByID("139");
-            System.out.println("Show Name: " + show);
-            
-            // Access other fields as needed
-            //String show = tvApi.searchShow("girls");
-            //System.out.println("show: " + show);
+        when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
+        when(connection.getContentType()).thenReturn("application/json"); // Optional, mimic content type
+        when(connection.getInputStream()).thenReturn(mock(InputStream.class)); // Not used in this approach
 
-            // Test searchSingleShow method
-            //String searchSingleShowResult = tvApi.searchSingleShow("Girls");
-            //System.out.println("searchSingleShow Result: " + searchSingleShowResult);
+        String actualJson = TvApi.searchShow("Better call saul");
 
-            // Test searchShowByID method
-            //Show searchShowByIDResult = tvApi.searchShowByID("139");
-            //System.out.println("searchShowByID Result: " + searchShowByIDResult);
-
-            // Test peopleSearch method
-            //String peopleSearchResult = tvApi.peopleSearch("lauren");
-            //System.out.println("peopleSearch Result: " + peopleSearchResult);
-
-            // Test getSchedule method
-            //String getScheduleResult = tvApi.getSchedule("US", "2022-01-01");
-            //System.out.println("getSchedule Result: " + getScheduleResult);
-
-            // Test getWebStreamingSchedule method
-            //String getWebStreamingScheduleResult = tvApi.getWebStreamingSchedule("US", "2022-01-01");
-            //System.out.println("getWebStreamingSchedule Result: " + getWebStreamingScheduleResult);
-
-            // Test getFullSchedule method
-            //String getFullScheduleResult = tvApi.getFullSchedule();
-            //System.out.println("getFullSchedule Result: " + getFullScheduleResult);
-
-            // Test getShowMainInfo method
-            //String getShowMainInfoResult = tvApi.getShowMainInfo("1"); // Replace "1" with an actual show ID
-            //System.out.println("getShowMainInfo Result: " + getShowMainInfoResult);
-
-            // Test getShowEpisodeList method
-            //String getShowEpisodeListResult = tvApi.getShowEpisodeList("1", true); // Replace "1" with an actual show ID
-            //System.out.println("getShowEpisodeList Result: " + getShowEpisodeListResult);
-            
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Handle API call failure
-            System.out.println("Failed to fetch data from the API");
-        }
+        assertTrue(actualJson.startsWith(expectedStart)); // Use startsWith for initial characters
     }
+
+    // Search Single Show Tests
+    @Test
+    public void testSearchSingleShow_Success() throws IOException {
+        String expectedStart = "{\"id\":618"; // Capture initial characters
+
+        when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
+        when(connection.getContentType()).thenReturn("application/json"); // Optional, mimic content type
+        when(connection.getInputStream()).thenReturn(mock(InputStream.class)); // Not used in this approach
+
+        String actualJson = TvApi.searchSingleShow("Better Call Saul");
+
+        assertTrue(actualJson.startsWith(expectedStart)); // Use startsWith for initial characters
+    }
+
+    // Search Show by ID Tests
+    @Test
+    public void testSearchShowByID_Success() throws IOException {
+        String expectedStart = "{\"id\":618"; // Capture initial characters
+
+        when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
+        when(connection.getContentType()).thenReturn("application/json");
+        when(connection.getInputStream()).thenReturn(mock(InputStream.class)); // Not used in this approach
+
+        String actualJson = TvApi.searchShowByID("618");  // Replace with a valid show ID
+
+        assertTrue(actualJson.startsWith(expectedStart)); // Use startsWith for initial characters
+    }
+
+    @Test
+    public void testSearchShowByID_NotFound() throws IOException {
+        when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_NOT_FOUND);
+
+        assertThrows(IOException.class, () -> TvApi.searchShowByID("InvalidShowID"));
+    }
+    @Test
+    public void testPeopleSearch_Success() throws IOException {
+        String expectedStart = "[{";
+
+        when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
+        when(connection.getContentType()).thenReturn("application/json");
+        InputStream mockStream = mock(InputStream.class);
+        when(mockStream.read(any(byte[].class))).thenReturn(expectedStart.getBytes().length);
+        when(connection.getInputStream()).thenReturn(mockStream);
+        String actualJson = TvApi.peopleSearch("Will Smith");
+
+        assertTrue(actualJson.startsWith(expectedStart));
+    }
+
+
+    @Test
+    public void testShowSearch_Success() throws IOException {
+        String expectedStart = "[{";
+
+        when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
+        when(connection.getContentType()).thenReturn("application/json");
+        InputStream mockStream = mock(InputStream.class);
+        when(mockStream.read(any(byte[].class))).thenReturn(expectedStart.getBytes().length);
+        when(connection.getInputStream()).thenReturn(mockStream);
+        String actualJson = TvApi.searchShow("breaking bad");
+
+        assertTrue(actualJson.startsWith(expectedStart));
+    }
+
+
+    @Test
+    public void testMakeApiCall_NetworkError() throws IOException {
+        when(connection.getResponseCode()).thenThrow(new IOException("Mocked network error"));
+
+        assertThrows(IOException.class, () -> TvApi.makeApiCall("https://api.tvmaze.com/books"));
+    }
+
+    @Test
+    public void testGetShowEpisodeList_Success() throws IOException {
+        String showId = "618";
+        boolean includeSpecials = true;
+
+        String expectedStart = "[{";
+
+        when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
+        when(connection.getContentType()).thenReturn("application/json");
+        InputStream mockStream = mock(InputStream.class);
+        when(connection.getInputStream()).thenReturn(mockStream);
+        when(mockStream.read(any(byte[].class))).thenReturn(expectedStart.getBytes().length);
+
+        String actualJson = TvApi.getShowEpisodeList(showId, includeSpecials);
+
+        assertTrue(actualJson.startsWith(expectedStart));
+    }
+
+
+
 }

@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="LanguageManagerTest added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_fa_IR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_fa_IR.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_fin_FI.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_fin_FI.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/RegisterControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/RegisterControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/LanguageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/LanguageManager.class" afterDir="false" />
-    </list>
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="LanguageManagerTest added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +92,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "apiclienttest",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/Users/ketimandunga/SimulationProject/Cinemabuddy/src/main/java",
@@ -353,9 +340,15 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cinemabuddy$RESTapiTest.ic" NAME="RESTapiTest Coverage Results" MODIFIED="1713384103442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>api.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cinemabuddy$TvApiTest_testSearchShow_NetworkError.ic" NAME="TvApiTest.testSearchShow_NetworkError Coverage Results" MODIFIED="1713388754627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>api.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Cinemabuddy$All_in_cinemabuddy.ic" NAME="All in cinemabuddy Coverage Results" MODIFIED="1713391231770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Cinemabuddy$ML.coverage" NAME="ML Coverage Results" MODIFIED="1710457273297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/Python/API" />
-    <SUITE FILE_PATH="coverage/cinemabuddy$RESTapiTest.ic" NAME="RESTapiTest Coverage Results" MODIFIED="1713384103442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/cinemabuddy$TvApiTest.ic" NAME="TvApiTest Coverage Results" MODIFIED="1713392433666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>api.*</FILTER>
     </SUITE>
   </component>
