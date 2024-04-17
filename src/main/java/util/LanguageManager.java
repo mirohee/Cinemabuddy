@@ -42,6 +42,10 @@ public class LanguageManager {
         return bundle;
     }
 
+    public Locale getLocale() {
+        return locale;
+    }
+
     public void addLanguageSelector(ComboBox<String> languageComboBox) {
         languageComboBox.getItems().addAll("English", "Persian", "Finnish"); // Add display names for languages
         String selectedLanguage = locale.getDisplayLanguage();
