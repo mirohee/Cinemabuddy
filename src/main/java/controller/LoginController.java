@@ -43,6 +43,8 @@ public class LoginController {
         passwordField.setPromptText(languageManager.getString("password"));
         loginButton.setText(languageManager.getString("login"));
     }
+
+
     @FXML
     private void LoginButtonClicked(ActionEvent event) throws IOException {
         String email = emailField.getText();
@@ -62,13 +64,9 @@ public class LoginController {
             // Set the scene with Register.fxml content
             stage.setScene(new Scene(homePageParent));
 
-
-
         } else {
             // Invalid credentials, show error message or take appropriate action
-            System.out.println("Invalid email or password.");
-
+            System.out.println(languageManager.getString("invalid_credentials"));
         }
     }
 }
-
