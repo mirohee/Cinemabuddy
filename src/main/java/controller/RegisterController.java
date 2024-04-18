@@ -40,6 +40,8 @@ public class RegisterController {
 
     private LanguageManager languageManager;
 
+    private UserController userController = new UserController();
+
     @FXML
     public void initialize() {
         languageManager = LanguageManager.getInstance();
@@ -58,6 +60,11 @@ public class RegisterController {
         ageField.setPromptText(languageManager.getString("age"));
         passwordField.setPromptText(languageManager.getString("password"));
         registerButton.setText(languageManager.getString("register"));
+        errorLabel.setText("");
+        String errorMessageKey = userController.getErrorMessageKey();
+        if (errorMessageKey != null) {
+            errorLabel.setText(languageManager.getString(errorMessageKey));
+        }
     }
 
     @FXML
@@ -86,7 +93,14 @@ public class RegisterController {
 
         } else {
             // Registration failed, show error message or take appropriate action
-            errorLabel.setText(userController.getErrorMessage());
+            if (userController.getErrorMessageKey().equals("InvalidInput")){
+                errorLabel.setText(languageManager.getString("InvalidInput"));
+            } else if (userController.getErrorMessageKey().equals("ExistingEmail")){
+                errorLabel.setText(userController.getErrorMessage());
+            } else {
+                errorLabel.setText(languageManager.getString("allFields"));
+            }
+
             System.out.println("Registration failed.");
         }
     }

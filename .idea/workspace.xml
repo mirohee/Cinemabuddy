@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="HomeController and RegisterController localisations">
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="MainControllerTest added, LanguageManagerTest fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_fa_IR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_fa_IR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_fin_FI.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_fin_FI.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +230,7 @@
       <workItem from="1712177091674" duration="8774000" />
       <workItem from="1713380995498" duration="21000" />
       <workItem from="1713381027488" duration="4008000" />
+      <workItem from="1713433381194" duration="2865000" />
     </task>
     <task id="LOCAL-00001" summary="Loginpage">
       <option name="closed" value="true" />
@@ -315,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713397528127</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MainControllerTest added, LanguageManagerTest fixed">
+      <option name="closed" value="true" />
+      <created>1713399526102</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713399526102</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,22 +359,23 @@
     <MESSAGE value="LanguageManagerTest added" />
     <MESSAGE value="LoginController localisation fi,uk,persian" />
     <MESSAGE value="HomeController and RegisterController localisations" />
-    <option name="LAST_COMMIT_MESSAGE" value="HomeController and RegisterController localisations" />
+    <MESSAGE value="MainControllerTest added, LanguageManagerTest fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="MainControllerTest added, LanguageManagerTest fixed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/cinemabuddy$RESTapiTest.ic" NAME="RESTapiTest Coverage Results" MODIFIED="1713384103442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>api.*</FILTER>
-    </SUITE>
+    <SUITE FILE_PATH="coverage/Cinemabuddy$All_in_cinemabuddy.ic" NAME="All in cinemabuddy Coverage Results" MODIFIED="1713399387735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cinemabuddy$TvApiTest_testSearchShow_NetworkError.ic" NAME="TvApiTest.testSearchShow_NetworkError Coverage Results" MODIFIED="1713388754627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>api.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Cinemabuddy$All_in_cinemabuddy.ic" NAME="All in cinemabuddy Coverage Results" MODIFIED="1713391231770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Cinemabuddy$ML.coverage" NAME="ML Coverage Results" MODIFIED="1710457273297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/Python/API" />
     <SUITE FILE_PATH="coverage/cinemabuddy$TvApiTest.ic" NAME="TvApiTest Coverage Results" MODIFIED="1713392433666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>api.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Cinemabuddy$ML.coverage" NAME="ML Coverage Results" MODIFIED="1710457273297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/Python/API" />
+    <SUITE FILE_PATH="coverage/cinemabuddy$RESTapiTest.ic" NAME="RESTapiTest Coverage Results" MODIFIED="1713384103442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>api.*</FILTER>
     </SUITE>
   </component>

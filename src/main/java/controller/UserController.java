@@ -2,6 +2,7 @@ package controller;
 
 import model.User;
 import org.mindrot.jbcrypt.BCrypt;
+import util.LanguageManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,11 +10,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserController {
-//add error handling
     private SaveToDatabase saveToDatabase;
     private String errorMessage;
+    private String errorMessageKey;
+    private LanguageManager languageManager;
+
 
     public UserController() {
+        languageManager = LanguageManager.getInstance();
         this.saveToDatabase = new SaveToDatabase();
     }
 
@@ -22,14 +26,16 @@ public class UserController {
         if (user.getFirstname().isEmpty() || user.getLastname().isEmpty() || user.getEmail().isEmpty()
                 || user.getAge().isEmpty() || user.getPassword().isEmpty()) {
             System.out.println("All fields are required.");
-            errorMessage = "All fields are required.";
+            setErrorMessage("allFields");
+            errorMessageKey = "allFields";
             return false;
         }
 
         // Check if the user with the given email already exists
         if (getUserByEmail(user.getEmail()) != null) {
             System.out.println("User with this email already exists.");
-            errorMessage = "User with this email already exists.";
+            setErrorMessage("ExistingEmail");
+            errorMessageKey = "ExistingEmail";
             return false;
         }
 
@@ -49,7 +55,8 @@ public class UserController {
 
         } catch (SQLException e) {
             System.out.println("Error registering user: " + e.getMessage());
-            errorMessage = "Error registering user: " + e.getMessage();
+            setErrorMessage("InvalidInput");
+            errorMessageKey = "InvalidInput";
             return false;
         }
     }
@@ -107,7 +114,14 @@ public class UserController {
         }
     }
 
+    public void setErrorMessage(String message) {
+        errorMessage = languageManager.getString(message);
+    }
     public String getErrorMessage() {
         return errorMessage;
+    }
+
+    public String getErrorMessageKey() {
+        return errorMessageKey;
     }
 }

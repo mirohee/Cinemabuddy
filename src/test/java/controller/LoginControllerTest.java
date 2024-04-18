@@ -85,7 +85,7 @@ public class LoginControllerTest extends ApplicationTest {
         clickOn(loginButton);
 
         // expect the page to be login page
-        assertEquals("Invalid email or password.", ((Label) lookup("#errorLabel").query()).getText());
+        assertEquals("Login Error", ((Label) lookup("#errorLabel").query()).getText());
 
     }
 }
