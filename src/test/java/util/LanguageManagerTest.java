@@ -14,14 +14,6 @@ public class LanguageManagerTest {
 
     private LanguageManager languageManager;
 
-
-    @BeforeAll
-    public static void initJFX() {
-        Platform.startup(() -> {
-            // This method will be invoked on JavaFX Toolkit thread
-        });
-    }
-
     @BeforeEach
     public void setUp() {
         languageManager = LanguageManager.getInstance();
