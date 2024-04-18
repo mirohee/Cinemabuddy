@@ -58,7 +58,6 @@ public class RegisterController {
         ageField.setPromptText(languageManager.getString("age"));
         passwordField.setPromptText(languageManager.getString("password"));
         registerButton.setText(languageManager.getString("register"));
-        errorLabel.setText(languageManager.getString("registerError"));
     }
 
     @FXML
