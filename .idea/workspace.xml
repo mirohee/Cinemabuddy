@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="register error added">
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="updated Login.fxml">
+      <change afterPath="$PROJECT_DIR$/src/test/java/controller/HomeControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_en_UK.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/languages_fa_IR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_fa_IR.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/languages_fin_FI.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_fin_FI.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +225,7 @@
       <workItem from="1712177091674" duration="8774000" />
       <workItem from="1713380995498" duration="21000" />
       <workItem from="1713381027488" duration="4008000" />
-      <workItem from="1713433381194" duration="3540000" />
+      <workItem from="1713433381194" duration="6189000" />
     </task>
     <task id="LOCAL-00001" summary="Loginpage">
       <option name="closed" value="true" />
@@ -336,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713436460203</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="updated Login.fxml">
+      <option name="closed" value="true" />
+      <created>1713436995621</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713436995621</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,14 +372,15 @@
     <MESSAGE value="HomeController and RegisterController localisations" />
     <MESSAGE value="MainControllerTest added, LanguageManagerTest fixed" />
     <MESSAGE value="register error added" />
-    <option name="LAST_COMMIT_MESSAGE" value="register error added" />
+    <MESSAGE value="updated Login.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Login.fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Cinemabuddy$All_in_cinemabuddy.ic" NAME="All in cinemabuddy Coverage Results" MODIFIED="1713436378729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Cinemabuddy$All_in_cinemabuddy.ic" NAME="All in cinemabuddy Coverage Results" MODIFIED="1713438490954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cinemabuddy$TvApiTest_testSearchShow_NetworkError.ic" NAME="TvApiTest.testSearchShow_NetworkError Coverage Results" MODIFIED="1713388754627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>api.*</FILTER>
     </SUITE>
