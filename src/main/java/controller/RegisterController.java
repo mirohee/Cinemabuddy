@@ -12,6 +12,9 @@ import util.LanguageManager;
 
 import java.io.IOException;
 
+/**
+ * Controller class for the registration view of the application.
+ */
 public class RegisterController {
 
     @FXML
@@ -42,17 +45,29 @@ public class RegisterController {
 
     private UserController userController = new UserController();
 
+    /**
+     * Initializes the controller. Sets up the language manager and updates UI with localized text.
+     */
     @FXML
     public void initialize() {
         languageManager = LanguageManager.getInstance();
         languageManager.addLanguageSelector(languageComboBox);
         updateUIWithLocalizedText();
     }
+
+    /**
+     * Handles language selection from the combo box.
+     * @param event The ActionEvent triggered by language selection.
+     */
     @FXML
     private void handleLanguageSelection(ActionEvent event) {
         languageManager.handleLanguageSelection(event);
         updateUIWithLocalizedText();
     }
+
+    /**
+     * Updates UI elements with localized text.
+     */
     private void updateUIWithLocalizedText() {
         firstNameField.setPromptText(languageManager.getString("firstname"));
         lastNameField.setPromptText(languageManager.getString("lastname"));
@@ -67,6 +82,11 @@ public class RegisterController {
         }
     }
 
+    /**
+     * Handles the event when the register button is clicked.
+     * @param event The ActionEvent triggered by clicking the register button.
+     * @throws IOException If an I/O error occurs while loading the home page.
+     */
     @FXML
     private void RegisterButtonClicked(ActionEvent event) throws IOException {
         String firstName = firstNameField.getText();
@@ -80,17 +100,16 @@ public class RegisterController {
         User newUser = new User(firstName, lastName, email, age, password);
 
         if (userController.registerUser(newUser)) {
-            System.out.println("Login successful!");
+            System.out.println("Registration successful!");
 
-            // Load the Register.fxml file
+            // Load the HomePage.fxml file
             Parent homePageParent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
 
             // Get the current stage
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
 
-            // Set the scene with Register.fxml content
+            // Set the scene with HomePage.fxml content
             stage.setScene(new Scene(homePageParent));
-
         } else {
             // Registration failed, show error message or take appropriate action
             if (userController.getErrorMessageKey().equals("InvalidInput")){

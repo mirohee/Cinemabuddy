@@ -4,7 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Utility class for establishing a connection to the database.
+ */
 public class SaveToDatabase {
+
+    /**
+     * Establishes a connection to the MySQL database.
+     * @return Connection object if successful, null otherwise.
+     */
     public Connection getConnectionToDb() {
         String url = "jdbc:mysql://mysql.metropolia.fi:3306/mirosaa";
         String username = "mirosaa";
@@ -21,5 +29,4 @@ public class SaveToDatabase {
         }
         return connection;
     }
-
 }

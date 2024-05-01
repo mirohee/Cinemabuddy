@@ -4,9 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="updated Login.fxml">
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/HomeControllerTest.java" afterDir="false" />
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="few tests for HomeControllerTest">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Python/API/ML.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/ApiClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/RESTapi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/TvApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/TvApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ContentBasedRecommender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SaveToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SaveToDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ShowParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ShowParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/LanguageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/LanguageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_fa_IR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_fa_IR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_fin_FI.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_fin_FI.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/ApiClientTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/RESTapiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controller/ContentBasedRecommenderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_en_UK.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/languages_fa_IR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_fa_IR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/languages_fin_FI.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_fin_FI.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,60 +93,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomepageController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JavaFx.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LoginPage.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SaveToDatabase.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TvApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.All in Cinemabuddy.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in cinemabuddy (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in cinemabuddy.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MainControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MainControllerTest.start.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MainControllerTest.testLoginButtonClicked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MainControllerTest.testSearchButtonClicked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SaveToDatabaseTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;/Users/ketimandunga/SimulationProject/Cinemabuddy/src/main/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/saari/Documents/dev/software-engineering-2/UILocalizationHomeAssignment&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.HomeController.executor": "Run",
+    "Application.HomepageController.executor": "Run",
+    "Application.JavaFx.executor": "Run",
+    "Application.LoginPage.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainController.executor": "Run",
+    "Application.MainControllerTest.executor": "Run",
+    "Application.SaveToDatabase.executor": "Run",
+    "Application.TvApiTest.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.All in Cinemabuddy.executor": "Run",
+    "JUnit.All in cinemabuddy (1).executor": "Run",
+    "JUnit.All in cinemabuddy.executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.MainControllerTest.executor": "Run",
+    "JUnit.MainControllerTest.start.executor": "Run",
+    "JUnit.MainControllerTest.testLoginButtonClicked.executor": "Run",
+    "JUnit.MainControllerTest.testSearchButtonClicked.executor": "Run",
+    "JUnit.SaveToDatabaseTest.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/Users/ketimandunga/SimulationProject/Cinemabuddy/src/main/java",
+    "last_opened_file_path": "C:/Users/saari/Documents/dev/Cinemabuddy",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/view" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainController">
     <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.MainController" />
       <module name="cinemabuddy" />
@@ -182,9 +208,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainController" />
         <item itemvalue="JUnit.All in cinemabuddy" />
         <item itemvalue="JUnit.All in cinemabuddy (1)" />
-        <item itemvalue="Application.MainController" />
         <item itemvalue="JUnit.RegisterControllerTest" />
         <item itemvalue="JUnit.LanguageManagerTest" />
       </list>
@@ -225,7 +251,9 @@
       <workItem from="1712177091674" duration="8774000" />
       <workItem from="1713380995498" duration="21000" />
       <workItem from="1713381027488" duration="4008000" />
-      <workItem from="1713433381194" duration="6189000" />
+      <workItem from="1713433381194" duration="6204000" />
+      <workItem from="1713528616407" duration="56000" />
+      <workItem from="1714577576035" duration="3643000" />
     </task>
     <task id="LOCAL-00001" summary="Loginpage">
       <option name="closed" value="true" />
@@ -339,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713436995621</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="few tests for HomeControllerTest">
+      <option name="closed" value="true" />
+      <created>1713439607489</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713439607490</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +409,8 @@
     <MESSAGE value="MainControllerTest added, LanguageManagerTest fixed" />
     <MESSAGE value="register error added" />
     <MESSAGE value="updated Login.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated Login.fxml" />
+    <MESSAGE value="few tests for HomeControllerTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="few tests for HomeControllerTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

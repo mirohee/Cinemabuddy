@@ -9,18 +9,28 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Controller class for user-related operations.
+ */
 public class UserController {
     private SaveToDatabase saveToDatabase;
     private String errorMessage;
     private String errorMessageKey;
     private LanguageManager languageManager;
 
-
+    /**
+     * Constructor to initialize the UserController.
+     */
     public UserController() {
         languageManager = LanguageManager.getInstance();
         this.saveToDatabase = new SaveToDatabase();
     }
 
+    /**
+     * Registers a new user.
+     * @param user The user object to register.
+     * @return True if registration is successful, false otherwise.
+     */
     public boolean registerUser(User user) {
         // Check if any of the fields are empty
         if (user.getFirstname().isEmpty() || user.getLastname().isEmpty() || user.getEmail().isEmpty()
@@ -61,7 +71,12 @@ public class UserController {
         }
     }
 
-
+    /**
+     * Logs in a user with the given email and password.
+     * @param email The email of the user.
+     * @param password The password of the user.
+     * @return True if login is successful, false otherwise.
+     */
     public boolean loginUser(String email, String password) {
         User user = getUserByEmail(email);
 
@@ -70,12 +85,15 @@ public class UserController {
             return true;
         } else {
             System.out.println("Invalid email or password.");
-
             return false;
         }
     }
 
-
+    /**
+     * Retrieves a user from the database by email.
+     * @param email The email of the user to retrieve.
+     * @return The User object if found, null otherwise.
+     */
     public User getUserByEmail(String email) {
         String query = "SELECT * FROM User WHERE Email = ?";
         try (Connection connection = saveToDatabase.getConnectionToDb();
@@ -99,6 +117,12 @@ public class UserController {
         }
         return null;
     }
+
+    /**
+     * Deletes a user from the database by email.
+     * @param email The email of the user to delete.
+     * @return True if deletion is successful, false otherwise.
+     */
     public Boolean deleteUser(String email) {
         String query = "DELETE FROM User WHERE Email = ?";
         try (Connection connection = saveToDatabase.getConnectionToDb();
@@ -114,13 +138,26 @@ public class UserController {
         }
     }
 
+    /**
+     * Sets the error message.
+     * @param message The error message to set.
+     */
     public void setErrorMessage(String message) {
         errorMessage = languageManager.getString(message);
     }
+
+    /**
+     * Retrieves the error message.
+     * @return The error message.
+     */
     public String getErrorMessage() {
         return errorMessage;
     }
 
+    /**
+     * Retrieves the error message key.
+     * @return The error message key.
+     */
     public String getErrorMessageKey() {
         return errorMessageKey;
     }

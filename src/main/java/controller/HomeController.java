@@ -13,10 +13,12 @@ import model.Show;
 import model.ShowParser;
 import util.LanguageManager;
 
+import java.io.IOException;
 import java.util.*;
 
-import java.io.IOException;
-
+/**
+ * Controller class for the home view of the Cinemabuddy application.
+ */
 public class HomeController {
 
     @FXML
@@ -33,11 +35,15 @@ public class HomeController {
 
     @FXML
     private Button searchButton;
+
     @FXML
     private ComboBox<String> languageComboBox;
 
     private LanguageManager languageManager;
 
+    /**
+     * Initializes the controller. Sets up the language manager and updates UI with localized text.
+     */
     @FXML
     public void initialize() {
         languageManager = LanguageManager.getInstance();
@@ -45,18 +51,30 @@ public class HomeController {
         updateUIWithLocalizedText();
     }
 
+    /**
+     * Handles language selection from the combo box.
+     * @param event The ActionEvent triggered by language selection.
+     */
     @FXML
     private void handleLanguageSelection(ActionEvent event) {
         languageManager.handleLanguageSelection(event);
         updateUIWithLocalizedText();
     }
 
+    /**
+     * Updates UI elements with localized text.
+     */
     private void updateUIWithLocalizedText() {
         searchLabelText.setText(languageManager.getString("searchtext"));
         searchButton.setText(languageManager.getString("searchbutton"));
         searchField.setPromptText(languageManager.getString("searchinput"));
     }
 
+    /**
+     * Handles the event when the search button is clicked.
+     * @param event The ActionEvent triggered by clicking the search button.
+     * @throws IOException If an I/O error occurs while loading the search results.
+     */
     @FXML
     private void SearchButtonClicked(ActionEvent event) throws IOException {
         String searchQuery = searchField.getText();
@@ -64,6 +82,7 @@ public class HomeController {
         ShowParser showParser = new ShowParser();
         Show show = showParser.parseJsonResponse(response);
 
+        // Display show information in the text area
         showInfoTextArea.setText(languageManager.getString("title") + ": " + show.getName() + "\n"
                 + languageManager.getString("type") + ": " + show.getType() + "\n"
                 + languageManager.getString("genre") + ": " + String.join(", ", show.getGenres()) + "\n"
@@ -77,11 +96,17 @@ public class HomeController {
         shows.add(show);
         displaySearchResults(shows);
 
+        // Load the search results in a new scene
         Parent searchResultsParent = FXMLLoader.load(getClass().getResource("/DisplayResults.fxml"));
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(searchResultsParent));
     }
 
+    /**
+     * Handles the event when the history button is clicked.
+     * @param event The ActionEvent triggered by clicking the history button.
+     * @throws IOException If an I/O error occurs while loading the watch history.
+     */
     @FXML
     private void HistoryButtonClicked(ActionEvent event) throws IOException {
         Parent homePageParent = FXMLLoader.load(getClass().getResource("/WatchHistory.fxml"));
@@ -89,6 +114,10 @@ public class HomeController {
         stage.setScene(new Scene(homePageParent));
     }
 
+    /**
+     * Displays search results on the UI.
+     * @param shows List of shows to display.
+     */
     private void displaySearchResults(List<Show> shows) {
         resultCardsContainer.getChildren().clear();
 
@@ -98,6 +127,11 @@ public class HomeController {
         }
     }
 
+    /**
+     * Creates a result card for a show.
+     * @param show The show for which the result card is created.
+     * @return The VBox representing the result card.
+     */
     private VBox createResultCard(Show show) {
         VBox resultCard = new VBox(10);
         resultCard.setStyle("-fx-background-color: #ffffff; -fx-padding: 10px;");

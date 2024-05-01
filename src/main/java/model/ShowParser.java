@@ -4,10 +4,21 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Parses JSON responses to extract show information.
+ */
 public class ShowParser {
+
+    /**
+     * Parses a JSON response and extracts show information.
+     *
+     * @param jsonResponse The JSON response to parse.
+     * @return A Show object containing the extracted information.
+     */
     public Show parseJsonResponse(String jsonResponse) {
         Gson gson = new Gson();
         JsonElement jsonElement = JsonParser.parseString(jsonResponse);
@@ -33,13 +44,11 @@ public class ShowParser {
         show.setEnded(jsonObject.get("ended").getAsString());
         show.setOfficialSite(jsonObject.get("officialSite").getAsString());
 
-
         // Parse rating
         JsonObject ratingObject = jsonObject.getAsJsonObject("rating");
         Rating rating = new Rating();
         rating.setAverage(ratingObject.get("average").getAsDouble());
         show.setRating(rating);
-
 
         // Parse image
         JsonObject imageObject = jsonObject.getAsJsonObject("image");
@@ -47,7 +56,6 @@ public class ShowParser {
 
         // Parse summary
         show.setSummary(jsonObject.get("summary").getAsString());
-
 
         return show;
     }

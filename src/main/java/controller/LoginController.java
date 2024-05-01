@@ -11,6 +11,9 @@ import util.LanguageManager;
 
 import java.io.IOException;
 
+/**
+ * Controller class for the login view of the application.
+ */
 public class LoginController {
 
     @FXML
@@ -30,6 +33,9 @@ public class LoginController {
 
     private LanguageManager languageManager;
 
+    /**
+     * Initializes the controller. Sets up the language manager and updates UI with localized text.
+     */
     @FXML
     public void initialize() {
         languageManager = LanguageManager.getInstance();
@@ -37,18 +43,30 @@ public class LoginController {
         updateUIWithLocalizedText();
     }
 
+    /**
+     * Handles language selection from the combo box.
+     * @param event The ActionEvent triggered by language selection.
+     */
     @FXML
     private void handleLanguageSelection(ActionEvent event) {
         languageManager.handleLanguageSelection(event);
         updateUIWithLocalizedText();
     }
 
+    /**
+     * Updates UI elements with localized text.
+     */
     private void updateUIWithLocalizedText() {
         emailField.setPromptText(languageManager.getString("email"));
         passwordField.setPromptText(languageManager.getString("password"));
         loginButton.setText(languageManager.getString("login"));
     }
 
+    /**
+     * Handles the event when the login button is clicked.
+     * @param event The ActionEvent triggered by clicking the login button.
+     * @throws IOException If an I/O error occurs while loading the home page.
+     */
     @FXML
     private void LoginButtonClicked(ActionEvent event) throws IOException {
         String email = emailField.getText();
@@ -56,7 +74,7 @@ public class LoginController {
 
         UserController userController = new UserController();
         if (userController.loginUser(email, password)) {
-            // Login successful, perform desired actions
+            // Login successful, load the home page
             System.out.println("Login successful!");
 
             // Load the HomePage.fxml file
@@ -67,9 +85,8 @@ public class LoginController {
 
             // Set the scene with HomePage.fxml content
             stage.setScene(new Scene(homePageParent));
-
         } else {
-            // Invalid credentials, show error message or take appropriate action
+            // Invalid credentials, display error message
             errorLabel.setText(languageManager.getString("loginError"));
         }
     }
