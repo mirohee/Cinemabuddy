@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LanguageManagerTest {
+class LanguageManagerTest {
 
     private LanguageManager languageManager;
 
@@ -20,12 +20,12 @@ public class LanguageManagerTest {
     }
 
     @Test
-    public void getInstanceNotNull() {
+    void getInstanceNotNull() {
         assertNotNull(languageManager);
     }
 
     @Test
-    public void getStringValidKey() {
+    void getStringValidKey() {
         String key = "login";
         String expected = "Login";
         String actual = languageManager.getString(key);
@@ -33,7 +33,7 @@ public class LanguageManagerTest {
     }
 
     @Test
-    public void loadLanguageValidLocale() {
+    void loadLanguageValidLocale() {
         String lang = "en";
         String country = "UK";
         languageManager.loadLanguage(lang, country);
@@ -42,7 +42,7 @@ public class LanguageManagerTest {
     }
 
     @Test
-    public void changeLanguageValidLocale() {
+    void changeLanguageValidLocale() {
         String lang = "fa";
         String country = "IR";
         languageManager.changeLanguage(lang, country);
@@ -51,14 +51,14 @@ public class LanguageManagerTest {
     }
 
     @Test
-    public void addLanguageSelectorValid() {
+    void addLanguageSelectorValid() {
         ComboBox<String> languageSelector = new ComboBox<>();
         languageManager.addLanguageSelector(languageSelector);
         assertNotNull(languageSelector);
     }
 
     @Test
-    public void testHandleLanguageSelection() {
+    void testHandleLanguageSelection() {
         ComboBox<String> comboBox = new ComboBox<>();
         comboBox.getItems().addAll("English", "Persian", "Finnish");
         comboBox.setValue("English");

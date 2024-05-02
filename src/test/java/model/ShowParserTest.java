@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class ShowParserTest {
+class ShowParserTest {
 
     @Test
-    public void testParseJsonResponse() {
+    void testParseJsonResponse() {
         String jsonResponse = "{\n" +
                 "    \"id\": 139,\n" +
                 "    \"name\": \"Girls\",\n" +

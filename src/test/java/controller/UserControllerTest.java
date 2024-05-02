@@ -18,7 +18,7 @@ public class UserControllerTest {
 
 
     @Test
-    public void testRegisterUser() {
+    void testRegisterUser() {
         User newUser = new User("test", "case", "testcase@example.com", "30", "abcef go");
         assertTrue(userController.registerUser(newUser));
         // Verify that the user was successfully added to the database
@@ -26,34 +26,34 @@ public class UserControllerTest {
     }
 
     @Test
-    public void testRegisterUserDuplicateEmail() {
+    void testRegisterUserDuplicateEmail() {
         User existingUser = new User("John", "Pork", "testuser@gmail.com", "25", "testpassword");
         assertFalse(userController.registerUser(existingUser));
     }
 
     @Test
-    public void testLoginUser() {
+    void testLoginUser() {
         userController.registerUser(new User("Jane", "Doe", "jane.doe@example.com", "30", "password"));
         assertTrue(userController.loginUser("jane.doe@example.com", "password"));
     }
 
     @Test
-    public void testLoginUserInvalidCredentials() {
+    void testLoginUserInvalidCredentials() {
         assertFalse(userController.loginUser("nonexistent@example.com", "password"));
     }
 
     @Test
-    public void testGetUserByEmail() {
+    void testGetUserByEmail() {
         assertNotNull(userController.getUserByEmail("jane.doe@example.com"));
     }
 
     @Test
-    public void testGetUserByEmailNonexistent() {
+    void testGetUserByEmailNonexistent() {
         assertNull(userController.getUserByEmail("nonexistent@example.com"));
     }
 
     @Test
-    public void testDeleteUser() {
+    void testDeleteUser() {
         assertTrue(userController.deleteUser("testcase@example.com"));
         // Verify that the user was successfully deleted from the database
         assertNull(userController.getUserByEmail("testcase@example.com"));

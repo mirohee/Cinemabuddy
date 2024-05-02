@@ -12,8 +12,7 @@ import java.net.HttpURLConnection;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-
-public class TvApiTest {
+class TvApiTest {
 
     @Mock
     private HttpURLConnection connection;
@@ -25,7 +24,7 @@ public class TvApiTest {
 
     // Search Show Tests
     @Test
-    public void testSearchShow_Success() throws IOException {
+    void testSearchShow_Success() throws IOException {
         String expectedStart = "[{"; // Capture initial characters of the array
 
         when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
@@ -39,7 +38,7 @@ public class TvApiTest {
 
     // Search Single Show Tests
     @Test
-    public void testSearchSingleShow_Success() throws IOException {
+    void testSearchSingleShow_Success() throws IOException {
         String expectedStart = "{\"id\":618"; // Capture initial characters
 
         when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
@@ -53,7 +52,7 @@ public class TvApiTest {
 
     // Search Show by ID Tests
     @Test
-    public void testSearchShowByID_Success() throws IOException {
+    void testSearchShowByID_Success() throws IOException {
         String expectedStart = "{\"id\":618"; // Capture initial characters
 
         when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
@@ -66,13 +65,13 @@ public class TvApiTest {
     }
 
     @Test
-    public void testSearchShowByID_NotFound() throws IOException {
+    void testSearchShowByID_NotFound() throws IOException {
         when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_NOT_FOUND);
 
         assertThrows(IOException.class, () -> TvApi.searchShowByID("InvalidShowID"));
     }
     @Test
-    public void testPeopleSearch_Success() throws IOException {
+    void testPeopleSearch_Success() throws IOException {
         String expectedStart = "[{";
 
         when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
@@ -87,7 +86,7 @@ public class TvApiTest {
 
 
     @Test
-    public void testShowSearch_Success() throws IOException {
+    void testShowSearch_Success() throws IOException {
         String expectedStart = "[{";
 
         when(connection.getResponseCode()).thenReturn(HttpURLConnection.HTTP_OK);
@@ -102,14 +101,14 @@ public class TvApiTest {
 
 
     @Test
-    public void testMakeApiCall_NetworkError() throws IOException {
+    void testMakeApiCall_NetworkError() throws IOException {
         when(connection.getResponseCode()).thenThrow(new IOException("Mocked network error"));
 
         assertThrows(IOException.class, () -> TvApi.makeApiCall("https://api.tvmaze.com/books"));
     }
 
     @Test
-    public void testGetShowEpisodeList_Success() throws IOException {
+    void testGetShowEpisodeList_Success() throws IOException {
         String showId = "618";
         boolean includeSpecials = true;
 

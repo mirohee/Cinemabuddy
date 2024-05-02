@@ -12,7 +12,7 @@ import util.LanguageManager;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginControllerTest extends ApplicationTest {
+class LoginControllerTest extends ApplicationTest {
 
     private LanguageManager languageManager;
 
@@ -27,7 +27,7 @@ public class LoginControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testControllerInitialization() {
+    void testControllerInitialization() {
         // Test initialization of UI components
         TextField emailField = lookup("#emailField").query();
         PasswordField passwordField = lookup("#passwordField").query();
@@ -42,7 +42,7 @@ public class LoginControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testHandleLanguageSelection() {
+    void testHandleLanguageSelection() {
         // Test language selection handling
         ComboBox<String> languageComboBox = lookup("#languageComboBox").query();
 
@@ -54,7 +54,7 @@ public class LoginControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testLoginButtonClicked() {
+    void testLoginButtonClicked() {
         // Test login button clicked
         TextField emailField = lookup("#emailField").query();
         PasswordField passwordField = lookup("#passwordField").query();
@@ -71,7 +71,7 @@ public class LoginControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testLoginButtonClickedInvalid() {
+    void testLoginButtonClickedInvalid() {
 
         TextField emailField = lookup("#emailField").query();
         PasswordField passwordField = lookup("#passwordField").query();
