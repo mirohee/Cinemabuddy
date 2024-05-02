@@ -74,9 +74,6 @@ public class LoginController {
 
         UserController userController = new UserController();
         if (userController.loginUser(email, password)) {
-            // Login successful, load the home page
-            System.out.println("Login successful!");
-
             // Load the HomePage.fxml file
             Parent homePageParent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
 

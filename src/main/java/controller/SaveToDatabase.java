@@ -1,8 +1,12 @@
 package controller;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * Utility class for establishing a connection to the database.
@@ -14,18 +18,22 @@ public class SaveToDatabase {
      * @return Connection object if successful, null otherwise.
      */
     public Connection getConnectionToDb() {
-        String url = "jdbc:mysql://mysql.metropolia.fi:3306/mirosaa";
-        String username = "mirosaa";
-        String password = "1234";
+        Properties props = new Properties();
+        try {
+            InputStream in = getClass().getClassLoader().getResourceAsStream("config.properties");
+            props.load(in);
+        } catch (IOException e) {
+            return null;
+        }
+        String url = props.getProperty("DATABASE_URL");
+        String username = props.getProperty("DATABASE_USERNAME");
+        String password = props.getProperty("DATABASE_PASSWORD");
 
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(url, username, password);
-            if (connection != null) {
-                System.out.println("Connected to the database!");
-            }
         } catch (SQLException e) {
-            System.out.println("Connection failed. Error: " + e.getMessage());
+            Logger.getGlobal().severe("Connection failed. Error: " + e.getMessage());
         }
         return connection;
     }

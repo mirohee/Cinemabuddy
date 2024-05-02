@@ -11,6 +11,7 @@ import org.testfx.framework.junit5.ApplicationTest;
 import util.LanguageManager;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HomeControllerTest extends ApplicationTest {
 
@@ -57,4 +58,5 @@ public class HomeControllerTest extends ApplicationTest {
             // Verify the selected language
             assertEquals("Persian", languageComboBox.getValue());
         }
+
 }

@@ -96,12 +96,9 @@ public class RegisterController {
         String password = passwordField.getText();
 
         // You can call your UserController.registerUser() method here
-        UserController userController = new UserController();
         User newUser = new User(firstName, lastName, email, age, password);
 
         if (userController.registerUser(newUser)) {
-            System.out.println("Registration successful!");
-
             // Load the HomePage.fxml file
             Parent homePageParent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
 
@@ -119,8 +116,6 @@ public class RegisterController {
             } else {
                 errorLabel.setText(languageManager.getString("allFields"));
             }
-
-            System.out.println("Registration failed.");
         }
     }
 }

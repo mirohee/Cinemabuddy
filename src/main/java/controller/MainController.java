@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,7 +49,6 @@ public class MainController {
     public void initialize() {
         languageManager = LanguageManager.getInstance();
         languageManager.addLanguageSelector(languageComboBox);
-        System.out.println("MainController initialized");
         updateUIWithLocalizedText();
     }
 
@@ -109,6 +109,6 @@ public class MainController {
      * @param args Command-line arguments.
      */
     public static void main(String[] args) {
-        App.launch(App.class);
+        Application.launch(App.class);
     }
 }

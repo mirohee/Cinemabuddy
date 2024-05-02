@@ -5,7 +5,7 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController" alignment="CENTER" spacing="20.0">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController" alignment="CENTER" spacing="20.0">
     <Label fx:id="showInfoTextArea" style="-fx-font-size: 14px; -fx-text-fill: #000000;" />
     <StackPane>
         <Rectangle width="800.0" height="600.0">
@@ -20,10 +20,10 @@
         </Rectangle>
         <VBox fx:id="resultCardsContainer" alignment="CENTER" spacing="20.0">
             <!-- Button for opening history -->
-            <HBox alignment="TOP_RIGHT" style="-fx-padding: 10px;">
-                <Button text="History" style="-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-cursor: hand;"
-                        onAction="#HistoryButtonClicked" />
-            </HBox>
+<!--            <HBox alignment="TOP_RIGHT" style="-fx-padding: 10px;">-->
+<!--                <Button text="History" style="-fx-background-color: #000000; -fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-cursor: hand;"-->
+<!--                        onAction="#HistoryButtonClicked" />-->
+<!--            </HBox>-->
             <Label text="Search Movies/Series " style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
             <!-- Sample Result Cards -->
             <VBox spacing="10">

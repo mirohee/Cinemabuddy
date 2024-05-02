@@ -1,13 +1,13 @@
 package controller;
 
 import model.User;
-import org.mindrot.jbcrypt.BCrypt;
 import util.LanguageManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 /**
  * Controller class for user-related operations.
@@ -35,7 +35,7 @@ public class UserController {
         // Check if any of the fields are empty
         if (user.getFirstname().isEmpty() || user.getLastname().isEmpty() || user.getEmail().isEmpty()
                 || user.getAge().isEmpty() || user.getPassword().isEmpty()) {
-            System.out.println("All fields are required.");
+            Logger.getGlobal().severe("All fields are required.");
             setErrorMessage("allFields");
             errorMessageKey = "allFields";
             return false;
@@ -43,7 +43,7 @@ public class UserController {
 
         // Check if the user with the given email already exists
         if (getUserByEmail(user.getEmail()) != null) {
-            System.out.println("User with this email already exists.");
+            Logger.getGlobal().severe("User with email already exists.");
             setErrorMessage("ExistingEmail");
             errorMessageKey = "ExistingEmail";
             return false;
@@ -64,7 +64,7 @@ public class UserController {
             return rowsAffected > 0;
 
         } catch (SQLException e) {
-            System.out.println("Error registering user: " + e.getMessage());
+            Logger.getGlobal().severe("Error registering user: " + e.getMessage());
             setErrorMessage("InvalidInput");
             errorMessageKey = "InvalidInput";
             return false;
@@ -81,10 +81,10 @@ public class UserController {
         User user = getUserByEmail(email);
 
         if (user != null && password.equals(user.getPassword())) {
-            System.out.println("Login successful!");
+            Logger.getGlobal().info("User logged in successfully.");
             return true;
         } else {
-            System.out.println("Invalid email or password.");
+            Logger.getGlobal().severe("Invalid email or password.");
             return false;
         }
     }
@@ -95,7 +95,7 @@ public class UserController {
      * @return The User object if found, null otherwise.
      */
     public User getUserByEmail(String email) {
-        String query = "SELECT * FROM User WHERE Email = ?";
+        String query = "SELECT FirstName, LastName, Email, Age, Password FROM User WHERE Email = ?";
         try (Connection connection = saveToDatabase.getConnectionToDb();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
@@ -113,7 +113,7 @@ public class UserController {
             }
 
         } catch (SQLException e) {
-            System.out.println("Error getting user by email: " + e.getMessage());
+            Logger.getGlobal().severe("Error retrieving user: " + e.getMessage());
         }
         return null;
     }
@@ -133,7 +133,7 @@ public class UserController {
             return rowsAffected > 0;
 
         } catch (SQLException e) {
-            System.out.println("Error deleting user: " + e.getMessage());
+            Logger.getGlobal().severe("Error deleting user: " + e.getMessage());
             return false;
         }
     }

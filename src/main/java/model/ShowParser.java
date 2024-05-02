@@ -1,6 +1,5 @@
 package model;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -20,7 +19,6 @@ public class ShowParser {
      * @return A Show object containing the extracted information.
      */
     public Show parseJsonResponse(String jsonResponse) {
-        Gson gson = new Gson();
         JsonElement jsonElement = JsonParser.parseString(jsonResponse);
         JsonObject jsonObject = jsonElement.getAsJsonObject();
 

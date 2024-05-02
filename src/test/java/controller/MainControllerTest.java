@@ -34,7 +34,7 @@ public class MainControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testControllerInitialization() {
+    void testControllerInitialization() {
         // Test initialization of UI components
         ComboBox<String> languageComboBox = lookup("#languageComboBox").query();
         Button loginButton = lookup("#loginButton").query();
@@ -46,7 +46,7 @@ public class MainControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testHandleLanguageSelection() {
+    void testHandleLanguageSelection() {
         // Test language selection handling
         ComboBox<String> languageComboBox = lookup("#languageComboBox").query();
 
@@ -58,7 +58,7 @@ public class MainControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testLoginButtonClicked() {
+    void testLoginButtonClicked() {
         // Test login button click
         Button loginButton = lookup("#loginButton").query();
         clickOn(loginButton);
@@ -70,7 +70,7 @@ public class MainControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testRegisterButtonClicked() {
+    void testRegisterButtonClicked() {
         // Test register button click
         Button registerButton = lookup("#registerButton").query();
         clickOn(registerButton);

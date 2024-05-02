@@ -10,6 +10,10 @@ import java.net.URL;
  * Provides methods to interact with the TV Maze API.
  */
 public class TvApi {
+
+    private TvApi() {
+        // Private constructor to hide the implicit public one.
+    }
     private static final String BASE_URL = "https://api.tvmaze.com";
 
     /**

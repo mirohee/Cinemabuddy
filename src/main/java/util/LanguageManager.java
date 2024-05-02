@@ -63,7 +63,6 @@ public class LanguageManager {
      */
     public void changeLanguage(String lang, String country) {
         loadLanguage(lang, country);
-        System.out.println("Language changed to " + lang + "_" + country);
     }
 
     /**
@@ -122,7 +121,6 @@ public class LanguageManager {
             default:
                 langCode = "en";
                 countryCode = "UK";
-                break;
         }
 
         changeLanguage(langCode, countryCode);

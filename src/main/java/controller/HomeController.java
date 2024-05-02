@@ -103,18 +103,6 @@ public class HomeController {
     }
 
     /**
-     * Handles the event when the history button is clicked.
-     * @param event The ActionEvent triggered by clicking the history button.
-     * @throws IOException If an I/O error occurs while loading the watch history.
-     */
-    @FXML
-    private void HistoryButtonClicked(ActionEvent event) throws IOException {
-        Parent homePageParent = FXMLLoader.load(getClass().getResource("/WatchHistory.fxml"));
-        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(homePageParent));
-    }
-
-    /**
      * Displays search results on the UI.
      * @param shows List of shows to display.
      */
@@ -135,15 +123,16 @@ public class HomeController {
     private VBox createResultCard(Show show) {
         VBox resultCard = new VBox(10);
         resultCard.setStyle("-fx-background-color: #ffffff; -fx-padding: 10px;");
+        String defaultStyle = "-fx-font-size: 14px; -fx-text-fill: #000000;";
 
         Label titleLabel = new Label(languageManager.getString("title") + ": " + show.getName());
         titleLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #000000;");
         Label ratingLabel = new Label(languageManager.getString("rating") + ": " + show.getRating().getAverage());
-        ratingLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
+        ratingLabel.setStyle(defaultStyle);
         Label genreLabel = new Label(languageManager.getString("genre") + ": " + String.join(", ", show.getGenres()));
-        genreLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
+        genreLabel.setStyle(defaultStyle);
         Label releaseYearLabel = new Label(languageManager.getString("premiered") + ": " + show.getPremiered());
-        releaseYearLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #000000;");
+        releaseYearLabel.setStyle(defaultStyle);
 
         resultCard.getChildren().addAll(titleLabel, ratingLabel, genreLabel, releaseYearLabel);
         return resultCard;
