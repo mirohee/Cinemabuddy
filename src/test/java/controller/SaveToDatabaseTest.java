@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SaveToDatabaseTest {
+class SaveToDatabaseTest {
 
     private SaveToDatabase saveToDatabase;
 
@@ -23,7 +23,7 @@ public class SaveToDatabaseTest {
     }
 
     @Test
-    public void testConnectionToDb() {
+    void testConnectionToDb() {
         try {
             Connection connection = saveToDatabase.getConnectionToDb();
 

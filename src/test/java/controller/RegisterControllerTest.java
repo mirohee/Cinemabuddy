@@ -36,7 +36,7 @@ public class RegisterControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testControllerInitialization() {
+    void testControllerInitialization() {
         // Test initialization of UI components
         TextField firstNameField = lookup("#firstNameField").query();
         TextField lastNameField = lookup("#lastNameField").query();
@@ -58,7 +58,7 @@ public class RegisterControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testHandleLanguageSelection() {
+    void testHandleLanguageSelection() {
         // Test language selection handling
         ComboBox<String> languageComboBox = lookup("#languageComboBox").query();
 
@@ -71,7 +71,7 @@ public class RegisterControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testRegisterButtonClicked() {
+    void testRegisterButtonClicked() {
         // Test register button click
         TextField firstNameField = lookup("#firstNameField").query();
         TextField lastNameField = lookup("#lastNameField").query();
@@ -97,7 +97,7 @@ public class RegisterControllerTest extends ApplicationTest {
     }
 
     @Test
-    public void testRegisterButtonClickedInvalid() {
+    void testRegisterButtonClickedInvalid() {
         // Test register button click with invalid input
         TextField firstNameField = lookup("#firstNameField").query();
         TextField lastNameField = lookup("#lastNameField").query();

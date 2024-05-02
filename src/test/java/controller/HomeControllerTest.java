@@ -33,7 +33,7 @@ public class HomeControllerTest extends ApplicationTest {
         }
 
         @Test
-        public void testControllerInitialization() {
+        void testControllerInitialization() {
             // Test initialization of UI components
             ComboBox<String> languageComboBox = lookup("#languageComboBox").query();
             TextField searchField = lookup("#searchField").query();
@@ -47,7 +47,7 @@ public class HomeControllerTest extends ApplicationTest {
         }
 
         @Test
-        public void testHandleLanguageSelection() {
+        void testHandleLanguageSelection() {
             // Test language selection handling
             ComboBox<String> languageComboBox = lookup("#languageComboBox").query();
 
