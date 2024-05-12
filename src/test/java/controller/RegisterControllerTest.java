@@ -117,7 +117,7 @@ public class RegisterControllerTest extends ApplicationTest {
         clickOn(registerButton);
 
         // expect the page to be register page
-        assertEquals("All fields are required.", ((Label) lookup("#errorLabel").query()).getText());
+        assertEquals("All fields are required", ((Label) lookup("#errorLabel").query()).getText());
     }
 
 }

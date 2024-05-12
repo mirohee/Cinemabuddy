@@ -4,34 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="documentation">
+    <list default="true" id="5caf4c8d-c9fb-42be-9097-dc735d4bd13b" name="Changes" comment="SonarLint fixes.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HomePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/TvApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/TvApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SaveToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SaveToDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ShowParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ShowParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/LanguageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/LanguageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DisplayResults.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DisplayResults.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/HomeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/HomeControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DisplayResults.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DisplayResults.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/ApiClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ContentBasedRecommender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/SaveToDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SaveToDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/LanguageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/LanguageManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages_en_UK.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controller/RegisterControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/RegisterControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/languages_en_UK.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/languages_en_UK.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +98,7 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
@@ -146,7 +124,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/view" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in cinemabuddy">
+  <component name="RunManager">
     <configuration name="MainController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.MainController" />
       <module name="cinemabuddy" />
@@ -176,21 +154,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LanguageManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cinemabuddy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.LanguageManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RegisterControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cinemabuddy" />
       <extension name="coverage">
@@ -206,13 +169,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="controller in cinemabuddy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cinemabuddy" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/controller" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in cinemabuddy" />
+        <item itemvalue="JUnit.controller in cinemabuddy" />
         <item itemvalue="Application.MainController" />
         <item itemvalue="JUnit.All in cinemabuddy (1)" />
         <item itemvalue="JUnit.RegisterControllerTest" />
-        <item itemvalue="JUnit.LanguageManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +227,11 @@
       <workItem from="1714577576035" duration="3699000" />
       <workItem from="1714624435811" duration="2387000" />
       <workItem from="1714647472002" duration="749000" />
-      <workItem from="1714648253025" duration="2801000" />
+      <workItem from="1714648253025" duration="4562000" />
+      <workItem from="1715000610573" duration="108000" />
+      <workItem from="1715063259661" duration="283000" />
+      <workItem from="1715063565436" duration="2239000" />
+      <workItem from="1715517682793" duration="742000" />
     </task>
     <task id="LOCAL-00001" summary="Loginpage">
       <option name="closed" value="true" />
@@ -386,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714590893238</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="SonarLint fixes.">
+      <option name="closed" value="true" />
+      <created>1714651291512</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714651291513</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,14 +405,15 @@
     <MESSAGE value="updated Login.fxml" />
     <MESSAGE value="few tests for HomeControllerTest" />
     <MESSAGE value="documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="documentation" />
+    <MESSAGE value="SonarLint fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="SonarLint fixes." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Cinemabuddy$All_in_cinemabuddy.ic" NAME="All in cinemabuddy Coverage Results" MODIFIED="1714650777510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Cinemabuddy$All_in_cinemabuddy.ic" NAME="All in cinemabuddy Coverage Results" MODIFIED="1715063969488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/cinemabuddy$TvApiTest_testSearchShow_NetworkError.ic" NAME="TvApiTest.testSearchShow_NetworkError Coverage Results" MODIFIED="1713388754627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>api.*</FILTER>
     </SUITE>
